@@ -9,6 +9,10 @@ struct MainView: View {
         NavigationView {
             List {
                 // Botón para la vista de sucesos históricos
+                Button("Escoge tu Personaje") {
+                    self.selectedView = "Escoge tu Personaje"
+                }
+                .buttonStyle(PlainButtonStyle())
                 Button("1519: Hernán Cortés y la Conquista de México en la Costa de Veracruz") {
                     self.selectedView = "Llegada Hernan"
                 }
@@ -29,6 +33,8 @@ struct MainView: View {
             // Vista que se mostrará al seleccionar un botón
             if let selectedView = selectedView {
                 switch selectedView {
+                case "Escoge tu Personaje":
+                    EscojePersonajesView()
                 case "Llegada Hernan":
                     LlegadaHernanView() // Reemplazar con la vista correspondiente
                 case "Notes":

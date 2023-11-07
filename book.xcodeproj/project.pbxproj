@@ -16,6 +16,7 @@
 		0A9BC8D92AFA091900C5903E /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BC8D82AFA091900C5903E /* NoteView.swift */; };
 		0AA2637D2AFAB5BE009A6F00 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA2637C2AFAB5BE009A6F00 /* SignupView.swift */; };
 		0AC60C542AFADCA700F68C9D /* LlegadaHernan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC60C532AFADCA700F68C9D /* LlegadaHernan.swift */; };
+		0AC60C562AFB011F00F68C9D /* EscojePersonajes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC60C552AFB011F00F68C9D /* EscojePersonajes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0AA2637C2AFAB5BE009A6F00 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		0AA2637E2AFAB69E009A6F00 /* book.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = book.entitlements; sourceTree = "<group>"; };
 		0AC60C532AFADCA700F68C9D /* LlegadaHernan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlegadaHernan.swift; sourceTree = "<group>"; };
+		0AC60C552AFB011F00F68C9D /* EscojePersonajes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscojePersonajes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		0A6342AB2AF9C63B0098F315 = {
 			isa = PBXGroup;
 			children = (
+				0AC60C552AFB011F00F68C9D /* EscojePersonajes.swift */,
 				0AC60C532AFADCA700F68C9D /* LlegadaHernan.swift */,
 				0A6342C52AF9E0500098F315 /* myStory.swift */,
 				0A9BC8D62AFA04D200C5903E /* FolderView.swift */,
@@ -158,6 +161,7 @@
 				0A6342BA2AF9C63B0098F315 /* ContentView.swift in Sources */,
 				0A9BC8D92AFA091900C5903E /* NoteView.swift in Sources */,
 				0AC60C542AFADCA700F68C9D /* LlegadaHernan.swift in Sources */,
+				0AC60C562AFB011F00F68C9D /* EscojePersonajes.swift in Sources */,
 				0A6342C62AF9E0500098F315 /* myStory.swift in Sources */,
 				0A9BC8D72AFA04D200C5903E /* FolderView.swift in Sources */,
 				0A6342B82AF9C63B0098F315 /* bookApp.swift in Sources */,
