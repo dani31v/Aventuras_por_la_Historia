@@ -24,7 +24,7 @@ struct MainView: View {
     @State private var llegadaHernanButtonP = false
     @EnvironmentObject var viewRouter: ViewRouter
     
-    @Binding var isAuth: Bool
+    @EnvironmentObject var authViewModel: AuthViewModel
     
     //Variables de bloqueo
     @State private var isPersonajeViewUnlocked = false
@@ -71,10 +71,7 @@ struct MainView: View {
                 .disabled(!isCaidaViewUnlocked)
                 .buttonStyle(PlainButtonStyle())
                 
-                NavigationLink(destination: Playground3()){
-                    Text("Canvas")
-                }
-             
+                
                
 
           
@@ -99,6 +96,7 @@ struct MainView: View {
             }
             
         }
+        
         
         
     }

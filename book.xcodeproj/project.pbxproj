@@ -29,6 +29,7 @@
 		16FDAFD92AFB795F00B9DE36 /* PencilKitCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFD82AFB795F00B9DE36 /* PencilKitCanvasView.swift */; };
 		16FDAFDB2AFB7B9100B9DE36 /* DrawingViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFDA2AFB7B9100B9DE36 /* DrawingViewModal.swift */; };
 		16FDAFDD2AFB7D3F00B9DE36 /* ImageViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFDC2AFB7D3F00B9DE36 /* ImageViewModal.swift */; };
+		16FDAFE12AFB867500B9DE36 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFE02AFB867500B9DE36 /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		16FDAFD82AFB795F00B9DE36 /* PencilKitCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKitCanvasView.swift; sourceTree = "<group>"; };
 		16FDAFDA2AFB7B9100B9DE36 /* DrawingViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModal.swift; sourceTree = "<group>"; };
 		16FDAFDC2AFB7D3F00B9DE36 /* ImageViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModal.swift; sourceTree = "<group>"; };
+		16FDAFE02AFB867500B9DE36 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				0AE4E87E2AFB1231002BC7BD /* PersonajeEscogido.swift */,
 				16FDAFDE2AFB7D7B00B9DE36 /* Modals */,
 				16FDAFB62AFB571000B9DE36 /* NavTesting.swift */,
+				16FDAFDF2AFB866200B9DE36 /* ViewModels */,
 				0A6342C52AF9E0500098F315 /* myStory.swift */,
 				16FDAFD72AFB794500B9DE36 /* UIViewRepresentables */,
 				0A6342B72AF9C63B0098F315 /* bookApp.swift */,
@@ -161,6 +164,14 @@
 				16FDAFDC2AFB7D3F00B9DE36 /* ImageViewModal.swift */,
 			);
 			path = Modals;
+			sourceTree = "<group>";
+		};
+		16FDAFDF2AFB866200B9DE36 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				16FDAFE02AFB867500B9DE36 /* AuthViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +261,7 @@
 				16FDAFD92AFB795F00B9DE36 /* PencilKitCanvasView.swift in Sources */,
 				0AFF3C892AFB052000235888 /* EscogePersonaje.swift in Sources */,
 				0A6342C62AF9E0500098F315 /* myStory.swift in Sources */,
+				16FDAFE12AFB867500B9DE36 /* AuthViewModel.swift in Sources */,
 				16FDAFB72AFB571000B9DE36 /* NavTesting.swift in Sources */,
 				0A9BC8D72AFA04D200C5903E /* FolderView.swift in Sources */,
 				0A6342B82AF9C63B0098F315 /* bookApp.swift in Sources */,

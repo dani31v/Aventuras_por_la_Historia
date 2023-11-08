@@ -11,39 +11,19 @@ import GameKit
 struct GameCenterView: View {
     
     let testNotes = myStory()
-
-    
-
+    @EnvironmentObject var authViewModel: AuthViewModel
     @State private var isContentViewPresented = false
     
     var body: some View {
         Button("Show Game Center") {
-            authenticateLocalPlayer()
+            authViewModel.authenticate()
         }
         
         
     }
     
 
-    private func authenticateLocalPlayer() {
-        let localPlayer = GKLocalPlayer.local
-        localPlayer.authenticateHandler = { viewController, error in
-            if let viewController = viewController {
-                
-                
-                
-            } else if localPlayer.isAuthenticated {
-                
-                print("SI")
-                
-                
     
-            } else {
-     
-                print("Error al autenticar al jugador: \(error?.localizedDescription ?? "Unknown error")")
-            }
-        }
-    }
 }
 
 struct GameCenterViewController: UIViewControllerRepresentable {
