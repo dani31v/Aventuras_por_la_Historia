@@ -39,6 +39,8 @@ struct EscogePersonajeView: View {
                                 .foregroundColor(.white)
                                 .cornerRadius(15)
                         }
+                        .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                        .opacity(0.5)
                         
                         Image("Malinche")
                             .resizable()
@@ -68,7 +70,10 @@ struct EscogePersonajeView: View {
                                 }) {
                                     Text("Moctezuma")
                                         .padding()
-                                        // ... más código
+                                        .background(Color.colorMOC)
+                                        .foregroundColor(.white)
+                                        .cornerRadius(15)
+
                                 }
                         
                       
@@ -86,7 +91,8 @@ struct EscogePersonajeView: View {
                                 .cornerRadius(15)
 
                         }
-                        
+                        .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                        .opacity(0.5)
                     }
                     
                     VStack{
@@ -103,6 +109,9 @@ struct EscogePersonajeView: View {
                                 .foregroundColor(.white)
                                 .cornerRadius(15)
                         }
+                        .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                        .opacity(0.5)
+                        
                         Image("CUI")
                             .resizable()
                             .frame(width: 300, height: 300)
@@ -116,6 +125,8 @@ struct EscogePersonajeView: View {
                                 .foregroundColor(.white)
                                 .cornerRadius(15)
                         }
+                        .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                        .opacity(0.5)
                     }
                     
                 }
@@ -123,7 +134,7 @@ struct EscogePersonajeView: View {
             }
             
         }
-        .navigationTitle("Escoje a tu personaje")
+        .navigationTitle("Escoge a tu personaje")
     }
     
 }

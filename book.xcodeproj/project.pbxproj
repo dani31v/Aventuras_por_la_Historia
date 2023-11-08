@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2AF73E2AFBE88B007357D9 /* Llegada2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2AF73D2AFBE88B007357D9 /* Llegada2.swift */; };
 		0A6342B82AF9C63B0098F315 /* bookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6342B72AF9C63B0098F315 /* bookApp.swift */; };
 		0A6342BA2AF9C63B0098F315 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6342B92AF9C63B0098F315 /* ContentView.swift */; };
 		0A6342BC2AF9C63E0098F315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A6342BB2AF9C63E0098F315 /* Assets.xcassets */; };
@@ -33,12 +34,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A2AF73D2AFBE88B007357D9 /* Llegada2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Llegada2.swift; sourceTree = "<group>"; };
 		0A6342B42AF9C63B0098F315 /* book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = book.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6342B72AF9C63B0098F315 /* bookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookApp.swift; sourceTree = "<group>"; };
 		0A6342B92AF9C63B0098F315 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0A6342BB2AF9C63E0098F315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A6342BE2AF9C63E0098F315 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A6342C52AF9E0500098F315 /* myStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myStory.swift; sourceTree = "<group>"; };
+		0A7254972AFC18D6000C40A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0A9BC8D62AFA04D200C5903E /* FolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderView.swift; sourceTree = "<group>"; };
 		0A9BC8D82AFA091900C5903E /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		0AA2637C2AFAB5BE009A6F00 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 		0A6342B62AF9C63B0098F315 /* book */ = {
 			isa = PBXGroup;
 			children = (
+				0A7254972AFC18D6000C40A9 /* Info.plist */,
 				0AA2637E2AFAB69E009A6F00 /* book.entitlements */,
 				0AA2637C2AFAB5BE009A6F00 /* SignupView.swift */,
 				0A6342B92AF9C63B0098F315 /* ContentView.swift */,
@@ -128,6 +132,7 @@
 				16FDAFC62AFB679300B9DE36 /* EncuentroView.swift */,
 				16FDAFC82AFB679C00B9DE36 /* SadNightView.swift */,
 				16FDAFCA2AFB67A600B9DE36 /* CaidaView.swift */,
+				0A2AF73D2AFBE88B007357D9 /* Llegada2.swift */,
 			);
 			path = "History Views";
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 				16FDAFCF2AFB67C700B9DE36 /* Playground1.swift in Sources */,
 				16FDAFCB2AFB67A600B9DE36 /* CaidaView.swift in Sources */,
 				16FDAFDB2AFB7B9100B9DE36 /* DrawingViewModal.swift in Sources */,
+				0A2AF73E2AFBE88B007357D9 /* Llegada2.swift in Sources */,
 				0A9BC8D92AFA091900C5903E /* NoteView.swift in Sources */,
 				0AC60C542AFADCA700F68C9D /* LlegadaHernan.swift in Sources */,
 				16FDAFC92AFB679C00B9DE36 /* SadNightView.swift in Sources */,
@@ -402,6 +408,7 @@
 				DEVELOPMENT_TEAM = 9BY9RQP8PP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = book/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Guardar obras de arte";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -434,6 +441,7 @@
 				DEVELOPMENT_TEAM = 9BY9RQP8PP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = book/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Guardar obras de arte";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

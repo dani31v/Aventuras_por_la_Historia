@@ -1,30 +1,58 @@
-//
-//  SignupView.swift
-//  book
-//
-//  Created by Daniela Valencia on 07/11/23.
-//
-
 import SwiftUI
 import GameKit
-
 struct GameCenterView: View {
     
     let testNotes = myStory()
     @EnvironmentObject var authViewModel: AuthViewModel
-    @State private var isContentViewPresented = false
+    @State private var isContentViewPresented = true
     
     var body: some View {
-        Button("Show Game Center") {
-            authViewModel.authenticate()
-        }
-        
-        
-    }
-    
-
-    
-}
+        HStack(spacing:10){
+                   VStack{
+                       Text ("¡Bienvenidos!")
+                           .font(.system(size: 42))
+                           .bold()
+                           .foregroundColor(.accentColor)
+                           .frame(width:260, height:50, alignment:.top)
+                       
+                       Spacer()
+                           .frame(height:650)
+                       
+                   }
+                   VStack{
+                       Spacer()
+                       Image ("Logo")
+                           .resizable()
+                           .scaledToFill()
+                           .frame(width: 500, height:500 )
+                           .clipped()
+                       Spacer(minLength: 0)
+                   }
+                   VStack{
+                       Spacer(minLength: 0)
+                       Button("Show Game Center") {
+                           authViewModel.authenticate()
+                       }
+                       
+                       .padding()
+                       .background(Color.accentColor)
+                       .foregroundColor(.white)
+                       .cornerRadius(15)
+                       .frame(width: 260, height: 50)
+                       Spacer()
+                           .frame(height:50)
+                       
+                       
+                   }
+                   
+                   
+                   
+                   
+               }
+           }
+           
+       }
+           
 
 struct GameCenterViewController: UIViewControllerRepresentable {
     
@@ -59,11 +87,9 @@ struct GameCenterViewController: UIViewControllerRepresentable {
         }
     }
 }
-
 struct GameCenterView_Previews: PreviewProvider {
     static var previews: some View {
         GameCenterView()
     }
 }
-
 

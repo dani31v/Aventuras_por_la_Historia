@@ -1,13 +1,13 @@
 //
-//  LlegadaHernan.swift
+//  Llegada2.swift
 //  book
 //
-//  Created by Daniela Valencia on 07/11/23.
+//  Created by Daniela Valencia on 08/11/23.
 //
 
 import SwiftUI
 
-struct LlegadaHernanView: View {
+struct Llegada2: View {
     @EnvironmentObject var viewRouter: ViewRouter
     @Binding var unlockEncuentro: Bool
     @State private var poppover = false
@@ -17,10 +17,11 @@ struct LlegadaHernanView: View {
             VStack{
                 HStack{
                     Button(action:{poppover.toggle()}){
-                        Image("Moc")
+                        Image("Xico")
                             .resizable()
                             .scaledToFill()
                             .frame(width: 300, height: 500)
+                            .offset(x:900, y: 0)
                             .clipped()
                         
                         
@@ -29,7 +30,7 @@ struct LlegadaHernanView: View {
                                 .foregroundStyle(Color.accentColor)
                             
                             VStack{
-                                Text("En el año 1519, llegó un hombre llamado Hernán Cortés a nuestras tierras viajando desde un lugar muy lejano llamado: España")
+                                Text("")
                                     .font(.headline)
                                     .padding()
                                     .foregroundStyle(Color.white)
@@ -52,7 +53,7 @@ struct LlegadaHernanView: View {
                 HStack{
                     VStack{
                         Button(action: {
-                            viewRouter.selectedView = "Llegada2"
+                            viewRouter.selectedView = "LlegadaHernan2"
                         }) {
                             Text("Hernán decidirá hacer amigos ")
                                 .padding()
@@ -65,7 +66,7 @@ struct LlegadaHernanView: View {
                     }
                     VStack{
                         Button(action: {
-                            viewRouter.selectedView = "Llegada2"
+                            viewRouter.selectedView = ""
                         }) {
                             Text("Decidirá seguir solo su camino...")
                                 .padding()
@@ -93,7 +94,7 @@ struct LlegadaHernanView: View {
                 
                 
             }
-            .navigationTitle("⛵️ Llegó Hernán Cortés")
+            .navigationTitle("⛵️ Llegada Hernán ")
         }
         
         
@@ -104,3 +105,4 @@ struct LlegadaHernanView: View {
     
     
 }
+

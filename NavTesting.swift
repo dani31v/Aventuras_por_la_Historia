@@ -16,7 +16,7 @@ struct NavTesting: View {
               
             
                 
-                Text("En el año 1519, un hombre llamado Hernán Cortés y sus amigos viajaron desde España a un lugar lejano llamado México, en América. Llegaron a la costa de Veracruz con barcos grandes. Hernán Cortés era un hombre valiente y quería explorar nuevas tierras.")
+                Text("En el año 1519, un hombre llamado Hernán Cortés a nuestras tierras viajando desde un lugar muy lejano llamado: España")
                     .font(.body)
                     .foregroundColor(.black)
                     .padding(.top, 45)

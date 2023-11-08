@@ -53,6 +53,7 @@ struct MainView: View {
                 .disabled(!isHernanViewUnlocked)
                 .buttonStyle(PlainButtonStyle())
                 
+                
                 NavigationLink(destination: EncuentroView(unlockSadNightView: $isSadNightViewUnlocked), tag: "Encuentro", selection: $viewRouter.selectedView) {
                     Text("⚔️ Un Encuentro Inesperado")
                 }

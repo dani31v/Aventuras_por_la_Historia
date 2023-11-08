@@ -33,7 +33,7 @@ struct PersonajeView: View {
                             .foregroundStyle(Color("ColorMOC"))
                         
                         VStack{
-                            Text("Hola Nativo! Yo soy el líder de los mexicas cuando los españoles llegaron y voy a contarte el lo que sucedió. Cuando los españoles llegaron, yo traté de ser amable con su líder, Cortés. Le di regalos y lo invitamos a quedarse en nuestra ciudad. Pero después, los españoles me capturaron y me llevaron prisionero. ¿Quieres saber que más paso?                                     Acompañame a esta historia y vamos a jugar!")
+                            Text("Hola Nativo! Yo soy el líder de los mexicas cuando los españoles llegaron y voy a contarte el lo que sucedió.                                   Acompañame a esta historia y Vamos a jugar!")
                                 .font(.headline)
                                 .padding()
                                 .foregroundStyle(Color.white)
@@ -46,7 +46,7 @@ struct PersonajeView: View {
                         }
                         .padding()
                     }
-                    .frame(width: 400, height: 350)
+                    .frame(width: 250, height: 300)
                     .opacity(showingPopover ? 1 : 0)
                     .transition(.slide)
                     
