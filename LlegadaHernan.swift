@@ -12,10 +12,7 @@ struct LlegadaHernanView: View {
             
             ScrollView{
                 VStack {
-                    Text("1519: Hernán Cortés y la Conquista de México en la Costa de Veracruz")
-                        .font(.title)
-                        .foregroundColor(.black)
-                        .padding(.top, 50)
+                  
                 
                     
                     Text("En el año 1519, un hombre llamado Hernán Cortés y sus amigos viajaron desde España a un lugar lejano llamado México, en América. Llegaron a la costa de Veracruz con barcos grandes. Hernán Cortés era un hombre valiente y quería explorar nuevas tierras.")
@@ -51,6 +48,7 @@ struct LlegadaHernanView: View {
                     Spacer()
                 }
             }
+            .navigationTitle("1519: Hernán Cortés y la Conquista de México en la Costa de Veracruz")
             
 
         }

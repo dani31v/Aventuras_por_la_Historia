@@ -6,25 +6,24 @@ struct MainView: View {
     @State private var selectedView: String? = nil
     @State private var PersonajeButtonP = false
     @State private var llegadaHernanButtonP = false
-
+    @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         NavigationView {
             List {
-                Button("Escoge tu Personaje") {
-                    self.selectedView = "Escoge tu Personaje"
-                    self.PersonajeButtonP = true
-                        
-                }
-                Button("Personaje") {
-                    self.selectedView = "Personaje"
-                }
-                .buttonStyle(PlainButtonStyle())
-                
                
-                Button("Llegada de Hernán Cortés") {
-                    self.selectedView = "Llegada Hernan"
+                NavigationLink(destination: EscogePersonajeView()){
+                    Text("Escoge tu personaje")
                 }
-                .buttonStyle(PlainButtonStyle())
+                NavigationLink(destination: PersonajeView()){
+                    Text("Personaje")
+                }
+                
+                
+                NavigationLink(destination: LlegadaHernanView(), tag: "LlegadaHernan", selection: $viewRouter.selectedView) {
+                    Text("Llegada de Hernán Cortés")
+                }
+              
+       
 
                 // Más botones para otras vistas
                 Button("Notas") {

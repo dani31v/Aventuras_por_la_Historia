@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EscogePersonajeView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         ScrollView(.vertical,showsIndicators:false){
             VStack{
@@ -51,6 +52,8 @@ struct EscogePersonajeView: View {
                                 .foregroundColor(.white)
                                 .cornerRadius(15)
                         }
+                        .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                        .opacity(0.5)
                     }
                     
                     VStack{
@@ -59,14 +62,14 @@ struct EscogePersonajeView: View {
                             .frame(width: 300, height: 300)
                         
                         Button(action: {
-                            // Acción para el botón de Moctezuma
-                        }) {
-                            Text("Moctezuma")
-                                .padding()
-                                .background(Color.colorMOC)
-                                .foregroundColor(.white)
-                                .cornerRadius(15)
-                        }
+                                    viewRouter.selectedView = "LlegadaHernan"
+                                }) {
+                                    Text("Moctezuma")
+                                        .padding()
+                                        // ... más código
+                                }
+                        
+                      
                         Image("PedroA")
                             .resizable()
                             .frame(width: 300, height: 300)
@@ -118,6 +121,7 @@ struct EscogePersonajeView: View {
             }
             
         }
+        .navigationTitle("Escoje a tu personaje")
     }
     
 }

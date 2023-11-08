@@ -18,6 +18,7 @@
 		0AC60C542AFADCA700F68C9D /* LlegadaHernan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC60C532AFADCA700F68C9D /* LlegadaHernan.swift */; };
 		0AE4E87F2AFB1231002BC7BD /* PersonajeEscogido.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE4E87E2AFB1231002BC7BD /* PersonajeEscogido.swift */; };
 		0AFF3C892AFB052000235888 /* EscogePersonaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFF3C882AFB052000235888 /* EscogePersonaje.swift */; };
+		16FDAFB52AFB524E00B9DE36 /* viewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFB42AFB524E00B9DE36 /* viewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0AC60C532AFADCA700F68C9D /* LlegadaHernan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlegadaHernan.swift; sourceTree = "<group>"; };
 		0AE4E87E2AFB1231002BC7BD /* PersonajeEscogido.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonajeEscogido.swift; sourceTree = "<group>"; };
 		0AFF3C882AFB052000235888 /* EscogePersonaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscogePersonaje.swift; sourceTree = "<group>"; };
+		16FDAFB42AFB524E00B9DE36 /* viewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,10 +52,12 @@
 		0A6342AB2AF9C63B0098F315 = {
 			isa = PBXGroup;
 			children = (
+				16FDAFB42AFB524E00B9DE36 /* viewRouter.swift */,
 				0AFF3C882AFB052000235888 /* EscogePersonaje.swift */,
 				0AE4E87E2AFB1231002BC7BD /* PersonajeEscogido.swift */,
 				0AC60C532AFADCA700F68C9D /* LlegadaHernan.swift */,
 				0A6342C52AF9E0500098F315 /* myStory.swift */,
+				0A6342B72AF9C63B0098F315 /* bookApp.swift */,
 				0A9BC8D62AFA04D200C5903E /* FolderView.swift */,
 				0A9BC8D82AFA091900C5903E /* NoteView.swift */,
 				0A6342B62AF9C63B0098F315 /* book */,
@@ -73,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				0AA2637E2AFAB69E009A6F00 /* book.entitlements */,
-				0A6342B72AF9C63B0098F315 /* bookApp.swift */,
 				0AA2637C2AFAB5BE009A6F00 /* SignupView.swift */,
 				0A6342B92AF9C63B0098F315 /* ContentView.swift */,
 				0A6342BB2AF9C63E0098F315 /* Assets.xcassets */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AA2637D2AFAB5BE009A6F00 /* SignupView.swift in Sources */,
+				16FDAFB52AFB524E00B9DE36 /* viewRouter.swift in Sources */,
 				0A6342BA2AF9C63B0098F315 /* ContentView.swift in Sources */,
 				0AE4E87F2AFB1231002BC7BD /* PersonajeEscogido.swift in Sources */,
 				0A9BC8D92AFA091900C5903E /* NoteView.swift in Sources */,
