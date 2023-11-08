@@ -7,6 +7,9 @@ struct MainView: View {
     @State private var PersonajeButtonP = false
     @State private var llegadaHernanButtonP = false
     @EnvironmentObject var viewRouter: ViewRouter
+    
+    //Variables de bloqueo
+    @State private var isHernanViewUnlocked = false
     var body: some View {
         NavigationView {
             List {
@@ -18,24 +21,34 @@ struct MainView: View {
                     Text("Personaje")
                 }
                 
+                NavigationLink(destination: NavTesting(unlockNextView: $isHernanViewUnlocked), tag: "NavTesting", selection: $viewRouter.selectedView) {
+                    Text("Test")
+                }
                 
-                NavigationLink(destination: LlegadaHernanView(), tag: "LlegadaHernan", selection: $viewRouter.selectedView) {
+                NavigationLink(destination: NavTesting(unlockNextView: $isHernanViewUnlocked), tag: "HernanC", selection: $viewRouter.selectedView) {
                     Text("Llegada de Hernán Cortés")
                 }
+                .disabled(!isHernanViewUnlocked)
+             
+               
+
               
        
 
-                // Más botones para otras vistas
+                
                 Button("Notas") {
                     self.selectedView = "Notes"
                 }
                 .buttonStyle(PlainButtonStyle())
         
-                // ... añadir más botones para otras vistas
+          
             }
             .listStyle(SidebarListStyle())
-            .navigationTitle("Aventuras por el mundo")
+      
             .frame(minWidth: 200, idealWidth: 250, maxWidth: 300, maxHeight: .infinity)
+            .navigationTitle("Nueva Aventura")
+      
+            .navigationViewStyle(DoubleColumnNavigationViewStyle())
 
             // Vista que se mostrará al seleccionar un botón
             if let selectedView = selectedView {

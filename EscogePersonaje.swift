@@ -62,7 +62,7 @@ struct EscogePersonajeView: View {
                             .frame(width: 300, height: 300)
                         
                         Button(action: {
-                                    viewRouter.selectedView = "LlegadaHernan"
+                                    viewRouter.selectedView = "NavTesting"
                                 }) {
                                     Text("Moctezuma")
                                         .padding()

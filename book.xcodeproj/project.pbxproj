@@ -19,6 +19,7 @@
 		0AE4E87F2AFB1231002BC7BD /* PersonajeEscogido.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE4E87E2AFB1231002BC7BD /* PersonajeEscogido.swift */; };
 		0AFF3C892AFB052000235888 /* EscogePersonaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFF3C882AFB052000235888 /* EscogePersonaje.swift */; };
 		16FDAFB52AFB524E00B9DE36 /* viewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFB42AFB524E00B9DE36 /* viewRouter.swift */; };
+		16FDAFB72AFB571000B9DE36 /* NavTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFB62AFB571000B9DE36 /* NavTesting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0AE4E87E2AFB1231002BC7BD /* PersonajeEscogido.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonajeEscogido.swift; sourceTree = "<group>"; };
 		0AFF3C882AFB052000235888 /* EscogePersonaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscogePersonaje.swift; sourceTree = "<group>"; };
 		16FDAFB42AFB524E00B9DE36 /* viewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewRouter.swift; sourceTree = "<group>"; };
+		16FDAFB62AFB571000B9DE36 /* NavTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavTesting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				0AFF3C882AFB052000235888 /* EscogePersonaje.swift */,
 				0AE4E87E2AFB1231002BC7BD /* PersonajeEscogido.swift */,
 				0AC60C532AFADCA700F68C9D /* LlegadaHernan.swift */,
+				16FDAFB62AFB571000B9DE36 /* NavTesting.swift */,
 				0A6342C52AF9E0500098F315 /* myStory.swift */,
 				0A6342B72AF9C63B0098F315 /* bookApp.swift */,
 				0A9BC8D62AFA04D200C5903E /* FolderView.swift */,
@@ -171,6 +174,7 @@
 				0AC60C542AFADCA700F68C9D /* LlegadaHernan.swift in Sources */,
 				0AFF3C892AFB052000235888 /* EscogePersonaje.swift in Sources */,
 				0A6342C62AF9E0500098F315 /* myStory.swift in Sources */,
+				16FDAFB72AFB571000B9DE36 /* NavTesting.swift in Sources */,
 				0A9BC8D72AFA04D200C5903E /* FolderView.swift in Sources */,
 				0A6342B82AF9C63B0098F315 /* bookApp.swift in Sources */,
 			);
