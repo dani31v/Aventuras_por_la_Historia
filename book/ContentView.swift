@@ -4,15 +4,20 @@ struct MainView: View {
     @State var searchString: String = ""
     @State var showingPopover = false
     @State private var selectedView: String? = nil
+    @State private var PersonajeButtonP = false
+    @State private var llegadaHernanButtonP = false
 
     var body: some View {
         NavigationView {
             List {
-                // Botón para la vista de sucesos históricos
                 Button("Escoge tu Personaje") {
                     self.selectedView = "Escoge tu Personaje"
+                    self.PersonajeButtonP = true
+                        
                 }
-                .buttonStyle(PlainButtonStyle())
+                .disabled(PersonajeButtonP)
+                
+               
                 Button("1519: Hernán Cortés y la Conquista de México en la Costa de Veracruz") {
                     self.selectedView = "Llegada Hernan"
                 }
@@ -34,7 +39,9 @@ struct MainView: View {
             if let selectedView = selectedView {
                 switch selectedView {
                 case "Escoge tu Personaje":
-                    EscojePersonajesView()
+                    EscogePersonajeView()
+                case "Personaje":
+                    PersonajeView()
                 case "Llegada Hernan":
                     LlegadaHernanView() // Reemplazar con la vista correspondiente
                 case "Notes":
