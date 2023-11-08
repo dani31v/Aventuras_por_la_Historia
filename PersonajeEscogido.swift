@@ -8,25 +8,68 @@
 import SwiftUI
 
 struct PersonajeView: View {
+    @State private var showingPopover = false
     var body: some View {
         VStack{
-            Text("El personaje que elegiste fue: Hernán Cortés")
+            Text("El personaje que elegiste fue: Moctezuma")
                 .font(.system(size: 40))
-            Image("Hernan")
-                .resizable()
-                .frame(width: 500, height: 500)
+                .foregroundColor(.colorMOC)
+            HStack{
+                Button(action:{showingPopover.toggle()}){
+                    Image("Moc")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 300, height: 500)
+                        .clipped()
+
+                        
+                       
+                    
+                    
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 40)
+                            .foregroundStyle(Color("ColorMOC"))
+                        
+                        VStack{
+                            Text("Hola Nativo! Yo soy el líder de los mexicas cuando los españoles llegaron y voy a contarte el lo que sucedió. Cuando los españoles llegaron, yo traté de ser amable con su líder, Cortés. Le di regalos y lo invitamos a quedarse en nuestra ciudad. Pero después, los españoles me capturaron y me llevaron prisionero. ¿Quieres saber que más paso?                                     Acompañame a esta historia y vamos a jugar!")
+                                .font(.headline)
+                                .padding()
+                                .foregroundStyle(Color.white)
+                            
+                            Button(action:{showingPopover.toggle()}){
+                                Text("Cerrar")
+                                    .foregroundStyle(Color.white)
+                                    .fontWeight(.semibold)
+                            }
+                        }
+                        .padding()
+                    }
+                    .frame(width: 400, height: 350)
+                    .opacity(showingPopover ? 1 : 0)
+                    .transition(.slide)
+                    
+                    
+                }
+        }
             
             Button(action: {
-                // Acción para el botón de Hernán Cortes
+              
             }) {
-                Text("Hernán Cortes")
+                Text("¡Vamos a Jugar!")
                     .padding()
-                    .background(Color.colorH)
+                    .background(Color.colorMOC)
                     .foregroundColor(.white)
                     .cornerRadius(15)
             }
         }
+            
         
-    }
-}
+    
+           }
+       }
 
+#Preview {
+    PersonajeView()
+}
+        
+  

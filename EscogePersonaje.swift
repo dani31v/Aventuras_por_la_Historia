@@ -22,16 +22,30 @@ struct EscogePersonajeView: View {
             
             ScrollView(.horizontal, showsIndicators: false){
                 
-                HStack(spacing: 10) { // Añade el modificador spacing para ajustar el espacio entre las columnas
+                HStack(spacing: 10) {
                     VStack{
                         Image("Hernan")
                             .resizable()
                             .frame(width: 300, height: 300)
                         
                         Button(action: {
-                            PersonajeView()
+                            
                         }) {
                             Text("Hernán Cortés")
+                                .padding()
+                                .background(Color.gray)
+                                .foregroundColor(.white)
+                                .cornerRadius(15)
+                        }
+                        
+                        Image("Malinche")
+                            .resizable()
+                            .frame(width: 300, height: 300)
+                        
+                        Button(action: {
+                            
+                        }) {
+                            Text("Malinche")
                                 .padding()
                                 .background(Color.gray)
                                 .foregroundColor(.white)
@@ -42,12 +56,56 @@ struct EscogePersonajeView: View {
                     VStack{
                         Image("Moc")
                             .resizable()
-                            .frame(width: 350, height: 350)
+                            .frame(width: 300, height: 300)
                         
                         Button(action: {
                             // Acción para el botón de Moctezuma
                         }) {
                             Text("Moctezuma")
+                                .padding()
+                                .background(Color.colorMOC)
+                                .foregroundColor(.white)
+                                .cornerRadius(15)
+                        }
+                        Image("PedroA")
+                            .resizable()
+                            .frame(width: 300, height: 300)
+                        
+                        Button(action: {
+                            
+                        }) {
+                            Text("Pedro Alvarado")
+                                .padding()
+                                .background(Color.gray)
+                                .foregroundColor(.white)
+                                .cornerRadius(15)
+
+                        }
+                        
+                    }
+                    
+                    VStack{
+                        Image("Xico")
+                            .resizable()
+                            .frame(width: 300, height: 300)
+                        
+                        Button(action: {
+                            // Acción para el botón de Xicoténcatl
+                        }) {
+                            Text("Xicoténcatl")
+                                .padding()
+                                .background(Color.gray)
+                                .foregroundColor(.white)
+                                .cornerRadius(15)
+                        }
+                        Image("CUI")
+                            .resizable()
+                            .frame(width: 300, height: 300)
+                        
+                        Button(action: {
+                            
+                        }) {
+                            Text("Cuitlahuac")
                                 .padding()
                                 .background(Color.gray)
                                 .foregroundColor(.white)
@@ -55,21 +113,6 @@ struct EscogePersonajeView: View {
                         }
                     }
                     
-                    VStack{
-                        Image("Xico")
-                            .resizable()
-                            .frame(width: 350, height: 350)
-                        
-                        Button(action: {
-                            // Acción para el botón de Xicoténcatl
-                        }) {
-                            Text("Xicoténcatl")
-                                .padding()
-                                .background(Color.colorXICO)
-                                .foregroundColor(.white)
-                                .cornerRadius(15)
-                        }
-                    }
                 }
                 
             }

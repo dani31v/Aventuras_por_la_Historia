@@ -15,10 +15,13 @@ struct MainView: View {
                     self.PersonajeButtonP = true
                         
                 }
-                .disabled(PersonajeButtonP)
+                Button("Personaje") {
+                    self.selectedView = "Personaje"
+                }
+                .buttonStyle(PlainButtonStyle())
                 
                
-                Button("1519: Hernán Cortés y la Conquista de México en la Costa de Veracruz") {
+                Button("Llegada de Hernán Cortés") {
                     self.selectedView = "Llegada Hernan"
                 }
                 .buttonStyle(PlainButtonStyle())
