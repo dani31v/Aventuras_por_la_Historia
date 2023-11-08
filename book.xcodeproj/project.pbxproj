@@ -20,6 +20,11 @@
 		0AFF3C892AFB052000235888 /* EscogePersonaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFF3C882AFB052000235888 /* EscogePersonaje.swift */; };
 		16FDAFB52AFB524E00B9DE36 /* viewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFB42AFB524E00B9DE36 /* viewRouter.swift */; };
 		16FDAFB72AFB571000B9DE36 /* NavTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFB62AFB571000B9DE36 /* NavTesting.swift */; };
+		16FDAFC72AFB679300B9DE36 /* EncuentroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFC62AFB679300B9DE36 /* EncuentroView.swift */; };
+		16FDAFC92AFB679C00B9DE36 /* SadNightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFC82AFB679C00B9DE36 /* SadNightView.swift */; };
+		16FDAFCB2AFB67A600B9DE36 /* CaidaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFCA2AFB67A600B9DE36 /* CaidaView.swift */; };
+		16FDAFCF2AFB67C700B9DE36 /* Playground1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFCE2AFB67C700B9DE36 /* Playground1.swift */; };
+		16FDAFD12AFB67CF00B9DE36 /* Playground2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFD02AFB67CF00B9DE36 /* Playground2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		0AFF3C882AFB052000235888 /* EscogePersonaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscogePersonaje.swift; sourceTree = "<group>"; };
 		16FDAFB42AFB524E00B9DE36 /* viewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewRouter.swift; sourceTree = "<group>"; };
 		16FDAFB62AFB571000B9DE36 /* NavTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavTesting.swift; sourceTree = "<group>"; };
+		16FDAFC62AFB679300B9DE36 /* EncuentroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncuentroView.swift; sourceTree = "<group>"; };
+		16FDAFC82AFB679C00B9DE36 /* SadNightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadNightView.swift; sourceTree = "<group>"; };
+		16FDAFCA2AFB67A600B9DE36 /* CaidaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaidaView.swift; sourceTree = "<group>"; };
+		16FDAFCE2AFB67C700B9DE36 /* Playground1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playground1.swift; sourceTree = "<group>"; };
+		16FDAFD02AFB67CF00B9DE36 /* Playground2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playground2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +64,11 @@
 		0A6342AB2AF9C63B0098F315 = {
 			isa = PBXGroup;
 			children = (
+				16FDAFC52AFB678200B9DE36 /* Playgrounds */,
+				16FDAFC42AFB677800B9DE36 /* History Views */,
 				16FDAFB42AFB524E00B9DE36 /* viewRouter.swift */,
 				0AFF3C882AFB052000235888 /* EscogePersonaje.swift */,
 				0AE4E87E2AFB1231002BC7BD /* PersonajeEscogido.swift */,
-				0AC60C532AFADCA700F68C9D /* LlegadaHernan.swift */,
 				16FDAFB62AFB571000B9DE36 /* NavTesting.swift */,
 				0A6342C52AF9E0500098F315 /* myStory.swift */,
 				0A6342B72AF9C63B0098F315 /* bookApp.swift */,
@@ -94,6 +105,26 @@
 				0A6342BE2AF9C63E0098F315 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		16FDAFC42AFB677800B9DE36 /* History Views */ = {
+			isa = PBXGroup;
+			children = (
+				0AC60C532AFADCA700F68C9D /* LlegadaHernan.swift */,
+				16FDAFC62AFB679300B9DE36 /* EncuentroView.swift */,
+				16FDAFC82AFB679C00B9DE36 /* SadNightView.swift */,
+				16FDAFCA2AFB67A600B9DE36 /* CaidaView.swift */,
+			);
+			path = "History Views";
+			sourceTree = "<group>";
+		};
+		16FDAFC52AFB678200B9DE36 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				16FDAFCE2AFB67C700B9DE36 /* Playground1.swift */,
+				16FDAFD02AFB67CF00B9DE36 /* Playground2.swift */,
+			);
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,12 +197,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16FDAFC72AFB679300B9DE36 /* EncuentroView.swift in Sources */,
 				0AA2637D2AFAB5BE009A6F00 /* SignupView.swift in Sources */,
 				16FDAFB52AFB524E00B9DE36 /* viewRouter.swift in Sources */,
+				16FDAFD12AFB67CF00B9DE36 /* Playground2.swift in Sources */,
 				0A6342BA2AF9C63B0098F315 /* ContentView.swift in Sources */,
 				0AE4E87F2AFB1231002BC7BD /* PersonajeEscogido.swift in Sources */,
+				16FDAFCF2AFB67C700B9DE36 /* Playground1.swift in Sources */,
+				16FDAFCB2AFB67A600B9DE36 /* CaidaView.swift in Sources */,
 				0A9BC8D92AFA091900C5903E /* NoteView.swift in Sources */,
 				0AC60C542AFADCA700F68C9D /* LlegadaHernan.swift in Sources */,
+				16FDAFC92AFB679C00B9DE36 /* SadNightView.swift in Sources */,
 				0AFF3C892AFB052000235888 /* EscogePersonaje.swift in Sources */,
 				0A6342C62AF9E0500098F315 /* myStory.swift in Sources */,
 				16FDAFB72AFB571000B9DE36 /* NavTesting.swift in Sources */,
