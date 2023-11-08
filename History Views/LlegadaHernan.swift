@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LlegadaHernanView: View {
     @EnvironmentObject var viewRouter: ViewRouter
+    @Binding var unlockEncuentro: Bool
     @State private var poppover = false
     var body: some View {
         
@@ -72,9 +73,22 @@ struct LlegadaHernanView: View {
                     
                 }
                 
+                Button(action: {
+                    unlockEncuentro = true
+                    viewRouter.selectedView = "Encuentro"
+                }) {
+                    Text("Siguiente")
+                        .padding()
+                        .background(Color.accentColor)
+                        .foregroundColor(.white)
+                        .cornerRadius(15)
+
+                    
+                }
+                
                 
             }
-            .navigationTitle("Llego Hernán Cortés")
+            .navigationTitle("⛵️ Llegó Hernán Cortés")
         }
         
         
@@ -84,7 +98,4 @@ struct LlegadaHernanView: View {
     
     
     
-}
-#Preview {
-    PersonajeView()
 }

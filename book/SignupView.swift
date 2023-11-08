@@ -20,9 +20,7 @@ struct GameCenterView: View {
         Button("Show Game Center") {
             authenticateLocalPlayer()
         }
-        .fullScreenCover(isPresented: $isContentViewPresented){
-            MainView(mystory: testNotes)
-        }
+        
         
     }
     
@@ -37,7 +35,7 @@ struct GameCenterView: View {
             } else if localPlayer.isAuthenticated {
                 
                 print("SI")
-                isContentViewPresented = true
+                
                 
     
             } else {

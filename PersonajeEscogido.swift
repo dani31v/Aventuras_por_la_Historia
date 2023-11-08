@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct PersonajeView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     @State private var showingPopover = false
+    @Binding var unlockHernanView: Bool
     var body: some View {
         VStack{
             Text("El personaje que elegiste fue: Moctezuma")
@@ -53,7 +55,8 @@ struct PersonajeView: View {
         }
             
             Button(action: {
-              
+                unlockHernanView = true
+                viewRouter.selectedView = "HernanC"
             }) {
                 Text("¡Vamos a Jugar!")
                     .padding()
@@ -68,8 +71,5 @@ struct PersonajeView: View {
            }
        }
 
-#Preview {
-    PersonajeView()
-}
-        
-  
+
+

@@ -25,6 +25,10 @@
 		16FDAFCB2AFB67A600B9DE36 /* CaidaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFCA2AFB67A600B9DE36 /* CaidaView.swift */; };
 		16FDAFCF2AFB67C700B9DE36 /* Playground1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFCE2AFB67C700B9DE36 /* Playground1.swift */; };
 		16FDAFD12AFB67CF00B9DE36 /* Playground2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFD02AFB67CF00B9DE36 /* Playground2.swift */; };
+		16FDAFD62AFB789C00B9DE36 /* Playground3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFD52AFB789C00B9DE36 /* Playground3.swift */; };
+		16FDAFD92AFB795F00B9DE36 /* PencilKitCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFD82AFB795F00B9DE36 /* PencilKitCanvasView.swift */; };
+		16FDAFDB2AFB7B9100B9DE36 /* DrawingViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFDA2AFB7B9100B9DE36 /* DrawingViewModal.swift */; };
+		16FDAFDD2AFB7D3F00B9DE36 /* ImageViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFDC2AFB7D3F00B9DE36 /* ImageViewModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		16FDAFCA2AFB67A600B9DE36 /* CaidaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaidaView.swift; sourceTree = "<group>"; };
 		16FDAFCE2AFB67C700B9DE36 /* Playground1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playground1.swift; sourceTree = "<group>"; };
 		16FDAFD02AFB67CF00B9DE36 /* Playground2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playground2.swift; sourceTree = "<group>"; };
+		16FDAFD52AFB789C00B9DE36 /* Playground3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playground3.swift; sourceTree = "<group>"; };
+		16FDAFD82AFB795F00B9DE36 /* PencilKitCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKitCanvasView.swift; sourceTree = "<group>"; };
+		16FDAFDA2AFB7B9100B9DE36 /* DrawingViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModal.swift; sourceTree = "<group>"; };
+		16FDAFDC2AFB7D3F00B9DE36 /* ImageViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +76,12 @@
 				16FDAFC42AFB677800B9DE36 /* History Views */,
 				16FDAFB42AFB524E00B9DE36 /* viewRouter.swift */,
 				0AFF3C882AFB052000235888 /* EscogePersonaje.swift */,
+				16FDAFD22AFB70B200B9DE36 /* ViewComponents */,
 				0AE4E87E2AFB1231002BC7BD /* PersonajeEscogido.swift */,
+				16FDAFDE2AFB7D7B00B9DE36 /* Modals */,
 				16FDAFB62AFB571000B9DE36 /* NavTesting.swift */,
 				0A6342C52AF9E0500098F315 /* myStory.swift */,
+				16FDAFD72AFB794500B9DE36 /* UIViewRepresentables */,
 				0A6342B72AF9C63B0098F315 /* bookApp.swift */,
 				0A9BC8D62AFA04D200C5903E /* FolderView.swift */,
 				0A9BC8D82AFA091900C5903E /* NoteView.swift */,
@@ -123,8 +134,33 @@
 			children = (
 				16FDAFCE2AFB67C700B9DE36 /* Playground1.swift */,
 				16FDAFD02AFB67CF00B9DE36 /* Playground2.swift */,
+				16FDAFD52AFB789C00B9DE36 /* Playground3.swift */,
 			);
 			path = Playgrounds;
+			sourceTree = "<group>";
+		};
+		16FDAFD22AFB70B200B9DE36 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		16FDAFD72AFB794500B9DE36 /* UIViewRepresentables */ = {
+			isa = PBXGroup;
+			children = (
+				16FDAFD82AFB795F00B9DE36 /* PencilKitCanvasView.swift */,
+			);
+			path = UIViewRepresentables;
+			sourceTree = "<group>";
+		};
+		16FDAFDE2AFB7D7B00B9DE36 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				16FDAFDA2AFB7B9100B9DE36 /* DrawingViewModal.swift */,
+				16FDAFDC2AFB7D3F00B9DE36 /* ImageViewModal.swift */,
+			);
+			path = Modals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,17 +233,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16FDAFD62AFB789C00B9DE36 /* Playground3.swift in Sources */,
 				16FDAFC72AFB679300B9DE36 /* EncuentroView.swift in Sources */,
 				0AA2637D2AFAB5BE009A6F00 /* SignupView.swift in Sources */,
 				16FDAFB52AFB524E00B9DE36 /* viewRouter.swift in Sources */,
 				16FDAFD12AFB67CF00B9DE36 /* Playground2.swift in Sources */,
 				0A6342BA2AF9C63B0098F315 /* ContentView.swift in Sources */,
+				16FDAFDD2AFB7D3F00B9DE36 /* ImageViewModal.swift in Sources */,
 				0AE4E87F2AFB1231002BC7BD /* PersonajeEscogido.swift in Sources */,
 				16FDAFCF2AFB67C700B9DE36 /* Playground1.swift in Sources */,
 				16FDAFCB2AFB67A600B9DE36 /* CaidaView.swift in Sources */,
+				16FDAFDB2AFB7B9100B9DE36 /* DrawingViewModal.swift in Sources */,
 				0A9BC8D92AFA091900C5903E /* NoteView.swift in Sources */,
 				0AC60C542AFADCA700F68C9D /* LlegadaHernan.swift in Sources */,
 				16FDAFC92AFB679C00B9DE36 /* SadNightView.swift in Sources */,
+				16FDAFD92AFB795F00B9DE36 /* PencilKitCanvasView.swift in Sources */,
 				0AFF3C892AFB052000235888 /* EscogePersonaje.swift in Sources */,
 				0A6342C62AF9E0500098F315 /* myStory.swift in Sources */,
 				16FDAFB72AFB571000B9DE36 /* NavTesting.swift in Sources */,
@@ -350,6 +390,7 @@
 				DEVELOPMENT_TEAM = 9BY9RQP8PP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Guardar obras de arte";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -381,6 +422,7 @@
 				DEVELOPMENT_TEAM = 9BY9RQP8PP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Guardar obras de arte";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

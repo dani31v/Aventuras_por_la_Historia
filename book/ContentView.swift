@@ -1,3 +1,19 @@
+/// `NavigationUnlockComponent` Este Navigationlink lo usamos para desbloquear las vistas en el sidebar segun el usuario avance en la historia
+/**
+ NavigationLink(destination: PersonajeView(unlockHernanView: $isHernanViewUnlocked), tag: "PersonajeView", selection: $viewRouter.selectedView) {
+     Text("🧑‍🦲 Tu personaje")
+ }
+ .disabled(!isPersonajeViewUnlocked)
+ 
+ - Parametros:
+    - destination: A que vista navega si el usuario le da tap
+    - unlockPersonajeView: Que vista desbloqueará
+    - tag: Nombre de la vista
+    - .disabled(!Bool): Si el bool es diferente de false desbloquea el botón
+ 
+ */
+
+
 import SwiftUI
 struct MainView: View {
     @ObservedObject var mystory: myStory
@@ -8,39 +24,59 @@ struct MainView: View {
     @State private var llegadaHernanButtonP = false
     @EnvironmentObject var viewRouter: ViewRouter
     
+    @Binding var isAuth: Bool
+    
     //Variables de bloqueo
+    @State private var isPersonajeViewUnlocked = false
     @State private var isHernanViewUnlocked = false
+    @State private var isEncuentroViewUnlocked = false
+    @State private var isSadNightViewUnlocked = false
+    @State private var isCaidaViewUnlocked = false
+    
     var body: some View {
         NavigationView {
             List {
                
-                NavigationLink(destination: EscogePersonajeView()){
+                NavigationLink(destination: EscogePersonajeView(unlockPersonajeView: $isPersonajeViewUnlocked)){
                     Text("Escoge tu personaje")
                 }
-                NavigationLink(destination: PersonajeView()){
-                    Text("Personaje")
+             
+                NavigationLink(destination: PersonajeView(unlockHernanView: $isHernanViewUnlocked), tag: "PersonajeView", selection: $viewRouter.selectedView) {
+                    Text("🧑‍🦲 Tu personaje")
                 }
+                .disabled(!isPersonajeViewUnlocked)
                 
-                NavigationLink(destination: NavTesting(unlockNextView: $isHernanViewUnlocked), tag: "NavTesting", selection: $viewRouter.selectedView) {
-                    Text("Test")
-                }
                 
-                NavigationLink(destination: NavTesting(unlockNextView: $isHernanViewUnlocked), tag: "HernanC", selection: $viewRouter.selectedView) {
-                    Text("Llegada de Hernán Cortés")
+                NavigationLink(destination: LlegadaHernanView( unlockEncuentro: $isEncuentroViewUnlocked), tag: "HernanC", selection: $viewRouter.selectedView) {
+                    Text("⛵️ Llegó Hernán Cortés")
                 }
                 .disabled(!isHernanViewUnlocked)
+                .buttonStyle(PlainButtonStyle())
+                
+                NavigationLink(destination: EncuentroView(unlockSadNightView: $isSadNightViewUnlocked), tag: "Encuentro", selection: $viewRouter.selectedView) {
+                    Text("⚔️ Un Encuentro Inesperado")
+                }
+                .disabled(!isEncuentroViewUnlocked)
+                .buttonStyle(PlainButtonStyle())
+                
+                NavigationLink(destination: SadNightView(unlockCaida: $isCaidaViewUnlocked), tag: "SadNight", selection: $viewRouter.selectedView) {
+                    Text("🌙 La noche triste")
+                }
+                .disabled(!isSadNightViewUnlocked)
+                .buttonStyle(PlainButtonStyle())
+                
+                NavigationLink(destination: CaidaView(), tag: "Caida", selection: $viewRouter.selectedView) {
+                    Text("⚠️ Tenochtitlan se cae")
+                }
+                .disabled(!isCaidaViewUnlocked)
+                .buttonStyle(PlainButtonStyle())
+                
+                NavigationLink(destination: Playground3()){
+                    Text("Canvas")
+                }
              
                
 
-              
-       
-
-                
-                Button("Notas") {
-                    self.selectedView = "Notes"
-                }
-                .buttonStyle(PlainButtonStyle())
-        
           
             }
             .listStyle(SidebarListStyle())
@@ -48,26 +84,22 @@ struct MainView: View {
             .frame(minWidth: 200, idealWidth: 250, maxWidth: 300, maxHeight: .infinity)
             .navigationTitle("Nueva Aventura")
       
-            .navigationViewStyle(DoubleColumnNavigationViewStyle())
+            
 
+            
             // Vista que se mostrará al seleccionar un botón
             if let selectedView = selectedView {
                 switch selectedView {
-                case "Escoge tu Personaje":
-                    EscogePersonajeView()
-                case "Personaje":
-                    PersonajeView()
-                case "Llegada Hernan":
-                    LlegadaHernanView() // Reemplazar con la vista correspondiente
-                case "Notes":
-                    NotesView() // Reemplazar con la vista correspondiente
-                // Agregar otros casos para las diferentes vistas
+                
+                
 
                 default:
                     Text("Vista no encontrada")
                 }
             }
+            
         }
+        
         
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EscogePersonajeView: View {
     @EnvironmentObject var viewRouter: ViewRouter
+    @Binding var unlockPersonajeView: Bool
     var body: some View {
         ScrollView(.vertical,showsIndicators:false){
             VStack{
@@ -62,7 +63,8 @@ struct EscogePersonajeView: View {
                             .frame(width: 300, height: 300)
                         
                         Button(action: {
-                                    viewRouter.selectedView = "NavTesting"
+                                    unlockPersonajeView = true
+                                    viewRouter.selectedView = "PersonajeView"
                                 }) {
                                     Text("Moctezuma")
                                         .padding()

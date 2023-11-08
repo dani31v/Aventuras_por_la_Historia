@@ -8,11 +8,47 @@
 import SwiftUI
 
 struct CaidaView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        ScrollView{
+            VStack{
+                HStack{
+                  
+                }
+                
+                Button(action: {
+                    viewRouter.selectedView = "LlegadaHernan"
+                }) {
+                    Text("Hernán decidirá hacerse amigo de ellos")
+                        .padding()
+                        .background(Color.accentColor)
+                        .foregroundColor(.white)
+                        .cornerRadius(15)
+
+                    
+                }
+                Button(action: {
+                    viewRouter.selectedView = "LlegadaHernan"
+                }) {
+                    Text("Decidirá seguir solo su camino...")
+                        .padding()
+                        .background(Color.accentColor)
+                        .foregroundColor(.white)
+                        .cornerRadius(15)
+
+                    
+                }
+                
+               
+                
+                
+            }
+            .navigationTitle("🔥 La caída de Tenochtitlan")
+        }
+        
+        
     }
 }
 
-#Preview {
-    CaidaView()
-}
