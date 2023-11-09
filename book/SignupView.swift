@@ -7,7 +7,7 @@ struct GameCenterView: View {
     @State private var isContentViewPresented = true
     
     var body: some View {
-        HStack(spacing:10){
+        HStack{
                    VStack{
                        Text ("¡Bienvenidos!")
                            .font(.system(size: 42))

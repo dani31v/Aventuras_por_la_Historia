@@ -38,16 +38,12 @@ struct PersonajeView: View {
                                 .padding()
                                 .foregroundStyle(Color.white)
                             
-                            Button(action:{showingPopover.toggle()}){
-                                Text("Cerrar")
-                                    .foregroundStyle(Color.white)
-                                    .fontWeight(.semibold)
-                            }
+                         
                         }
                         .padding()
                     }
                     .frame(width: 250, height: 300)
-                    .opacity(showingPopover ? 1 : 0)
+           
                     .transition(.slide)
                     
                     

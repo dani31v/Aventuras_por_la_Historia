@@ -16,7 +16,35 @@ struct EncuentroView: View {
         ScrollView{
             VStack{
                 HStack{
-                  
+                                Button(action:{poppover.toggle()}){
+                                    Image("Moc")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 300, height: 500)
+                                        .clipped()
+                                    
+                                    
+                                    ZStack{
+                                        RoundedRectangle(cornerRadius: 40)
+                                            .foregroundStyle(Color.accentColor)
+                                        
+                                        VStack{
+                                            Text("")
+                                                .font(.headline)
+                                                .padding()
+                                                .foregroundStyle(Color.white)
+                                            
+                                         
+                                        }
+                                        .padding()
+                                    }
+                                    .frame(width: 300, height: 250)
+                                
+                                    .transition(.slide)
+                                    
+                                    
+                                }
+                            }
                 }
                 
                 Button(action: {
@@ -64,4 +92,4 @@ struct EncuentroView: View {
         
     }
     
-}
+

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct LlegadaHernanView: View {
     @EnvironmentObject var viewRouter: ViewRouter
-    @Binding var unlockEncuentro: Bool
+    @Binding var unlockHernanView2: Bool
+   
     @State private var poppover = false
     var body: some View {
         
@@ -33,17 +34,11 @@ struct LlegadaHernanView: View {
                                     .font(.headline)
                                     .padding()
                                     .foregroundStyle(Color.white)
-                                
-                                Button(action:{poppover.toggle()}){
-                                    Text("Cerrar")
-                                        .foregroundStyle(Color.white)
-                                        .fontWeight(.semibold)
-                                }
+                               
                             }
                             .padding()
                         }
                         .frame(width: 300, height: 250)
-                        .opacity(poppover ? 1 : 0)
                         .transition(.slide)
                         
                         
@@ -79,8 +74,8 @@ struct LlegadaHernanView: View {
                     
                 }
                 Button(action: {
-                    unlockEncuentro = true
-                    viewRouter.selectedView = "Encuentro"
+                    unlockHernanView2 = true
+                    viewRouter.selectedView = "HernanC2"
                 }) {
                     Text("Siguiente")
                         .padding()

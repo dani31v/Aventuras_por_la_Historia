@@ -29,6 +29,7 @@ struct MainView: View {
     //Variables de bloqueo
     @State private var isPersonajeViewUnlocked = false
     @State private var isHernanViewUnlocked = false
+    @State private var isHernanView2Unlocked = false
     @State private var isEncuentroViewUnlocked = false
     @State private var isSadNightViewUnlocked = false
     @State private var isCaidaViewUnlocked = false
@@ -47,7 +48,13 @@ struct MainView: View {
                 .disabled(!isPersonajeViewUnlocked)
                 
                 
-                NavigationLink(destination: LlegadaHernanView( unlockEncuentro: $isEncuentroViewUnlocked), tag: "HernanC", selection: $viewRouter.selectedView) {
+                NavigationLink(destination: LlegadaHernanView( unlockHernanView2: $isHernanView2Unlocked), tag: "HernanC", selection: $viewRouter.selectedView) {
+                    Text("⛵️ Llegó Hernán Cortés")
+                }
+                .disabled(!isHernanView2Unlocked)
+                .buttonStyle(PlainButtonStyle())
+                
+                NavigationLink(destination: Llegada2View( unlockEncuentro: $isEncuentroViewUnlocked), tag: "HernanC2", selection: $viewRouter.selectedView) {
                     Text("⛵️ Llegó Hernán Cortés")
                 }
                 .disabled(!isHernanViewUnlocked)
