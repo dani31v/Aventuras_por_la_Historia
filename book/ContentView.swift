@@ -1,28 +1,30 @@
 /// `NavigationUnlockComponent` Este Navigationlink lo usamos para desbloquear las vistas en el sidebar segun el usuario avance en la historia
 /**
  NavigationLink(destination: PersonajeView(unlockHernanView: $isHernanViewUnlocked), tag: "PersonajeView", selection: $viewRouter.selectedView) {
-     Text("🧑‍🦲 Tu personaje")
+ Text("🧑‍🦲 Tu personaje")
  }
  .disabled(!isPersonajeViewUnlocked)
  
  - Parametros:
-    - destination: A que vista navega si el usuario le da tap
-    - unlockPersonajeView: Que vista desbloqueará
-    - tag: Nombre de la vista
-    - .disabled(!Bool): Si el bool es diferente de false desbloquea el botón
+ - destination: A que vista navega si el usuario le da tap
+ - unlockPersonajeView: Que vista desbloqueará
+ - tag: Nombre de la vista
+ - .disabled(!Bool): Si el bool es diferente de false desbloquea el botón
  
  */
 
 
 import SwiftUI
+import SceneKit
 struct MainView: View {
+    @State private var scene: SCNScene?
     @ObservedObject var mystory: myStory
     @State var searchString: String = ""
     @State var showingPopover = false
-    @State private var selectedView: String? = nil
     @State private var PersonajeButtonP = false
     @State private var llegadaHernanButtonP = false
     @EnvironmentObject var viewRouter: ViewRouter
+    @State private var selectedView: String? = "WorldView"
     
     @EnvironmentObject var authViewModel: AuthViewModel
     
@@ -37,11 +39,11 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             List {
-               
+                
                 NavigationLink(destination: EscogePersonajeView(unlockPersonajeView: $isPersonajeViewUnlocked)){
                     Text("Escoge tu personaje")
                 }
-             
+                
                 NavigationLink(destination: PersonajeView(unlockHernanView: $isHernanViewUnlocked), tag: "PersonajeView", selection: $viewRouter.selectedView) {
                     Text("🧑‍🦲 Tu personaje")
                 }
@@ -80,24 +82,30 @@ struct MainView: View {
                 .buttonStyle(PlainButtonStyle())
                 
                 
-               
-
-          
+                
+                
+                
             }
             .listStyle(SidebarListStyle())
-      
+            
             .frame(minWidth: 200, idealWidth: 250, maxWidth: 300, maxHeight: .infinity)
             .navigationTitle("Nueva Aventura")
-      
             
-
+            
+            
             
             // Vista que se mostrará al seleccionar un botón
             if let selectedView = selectedView {
                 switch selectedView {
-                
-                
-
+                    
+                case "WorldView":
+                    WorldView(scene: $scene)
+                                .onAppear {
+                                    // Configura tu escena de SceneKit aquí
+                                    self.scene = SCNScene(named: "mundo.scn")
+                                    // Asegúrate de configurar la cámara y cualquier otra configuración inicial aquí
+                                }
+                    
                 default:
                     Text("Vista no encontrada")
                 }
@@ -139,7 +147,7 @@ struct CreateNewFolder: View {
         self._showingPopover = showingPopover
         self.mystory = mystory
     }
-   
+    
     var body: some View {
         TextField("Name", text: $NewFolderName)
         GeometryReader{ geo in
@@ -171,11 +179,11 @@ struct CreateNewFolder: View {
                         }
                         Button(action: {mystory.folders.append(Folder(name: NewFolderName))
                             showingPopover.toggle()}){
-                            
-                            Text("Enter")
-                                .frame(maxWidth: .infinity)
-                            
-                        }
+                                
+                                Text("Enter")
+                                    .frame(maxWidth: .infinity)
+                                
+                            }
                     }
                 }
                 
@@ -188,13 +196,13 @@ struct CreateNewFolder: View {
     
 }
 struct MainView_Previews: PreviewProvider {
-        static var previews: some View {
-            let testNotes = myStory()
-            testNotes.folders = testFolders
-            return MainView(mystory: testNotes)
-        }
+    static var previews: some View {
+        let testNotes = myStory()
+        testNotes.folders = testFolders
+        return MainView(mystory: testNotes)
     }
-    
-    
-    
+}
+
+
+
 

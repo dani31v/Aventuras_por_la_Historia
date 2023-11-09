@@ -31,6 +31,9 @@
 		16FDAFDB2AFB7B9100B9DE36 /* DrawingViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFDA2AFB7B9100B9DE36 /* DrawingViewModal.swift */; };
 		16FDAFDD2AFB7D3F00B9DE36 /* ImageViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFDC2AFB7D3F00B9DE36 /* ImageViewModal.swift */; };
 		16FDAFE12AFB867500B9DE36 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFE02AFB867500B9DE36 /* AuthViewModel.swift */; };
+		16FDAFE32AFC6AAE00B9DE36 /* CustomSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFE22AFC6AAE00B9DE36 /* CustomSceneView.swift */; };
+		16FDAFE52AFC6BE000B9DE36 /* WorldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FDAFE42AFC6BE000B9DE36 /* WorldView.swift */; };
+		16FDAFE82AFC6C2B00B9DE36 /* mundo.scn in Resources */ = {isa = PBXBuildFile; fileRef = 16FDAFE72AFC6C2B00B9DE36 /* mundo.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		16FDAFDA2AFB7B9100B9DE36 /* DrawingViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModal.swift; sourceTree = "<group>"; };
 		16FDAFDC2AFB7D3F00B9DE36 /* ImageViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModal.swift; sourceTree = "<group>"; };
 		16FDAFE02AFB867500B9DE36 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		16FDAFE22AFC6AAE00B9DE36 /* CustomSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSceneView.swift; sourceTree = "<group>"; };
+		16FDAFE42AFC6BE000B9DE36 /* WorldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldView.swift; sourceTree = "<group>"; };
+		16FDAFE72AFC6C2B00B9DE36 /* mundo.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mundo.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,8 @@
 				0A6342C52AF9E0500098F315 /* myStory.swift */,
 				16FDAFD72AFB794500B9DE36 /* UIViewRepresentables */,
 				0A6342B72AF9C63B0098F315 /* bookApp.swift */,
+				16FDAFE62AFC6C0C00B9DE36 /* 3D Models */,
+				16FDAFE42AFC6BE000B9DE36 /* WorldView.swift */,
 				0A9BC8D62AFA04D200C5903E /* FolderView.swift */,
 				0A9BC8D82AFA091900C5903E /* NoteView.swift */,
 				0A6342B62AF9C63B0098F315 /* book */,
@@ -157,6 +165,7 @@
 		16FDAFD72AFB794500B9DE36 /* UIViewRepresentables */ = {
 			isa = PBXGroup;
 			children = (
+				16FDAFE22AFC6AAE00B9DE36 /* CustomSceneView.swift */,
 				16FDAFD82AFB795F00B9DE36 /* PencilKitCanvasView.swift */,
 			);
 			path = UIViewRepresentables;
@@ -177,6 +186,14 @@
 				16FDAFE02AFB867500B9DE36 /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		16FDAFE62AFC6C0C00B9DE36 /* 3D Models */ = {
+			isa = PBXGroup;
+			children = (
+				16FDAFE72AFC6C2B00B9DE36 /* mundo.scn */,
+			);
+			path = "3D Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +256,7 @@
 			files = (
 				0A6342BF2AF9C63E0098F315 /* Preview Assets.xcassets in Resources */,
 				0A6342BC2AF9C63E0098F315 /* Assets.xcassets in Resources */,
+				16FDAFE82AFC6C2B00B9DE36 /* mundo.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +272,7 @@
 				0AA2637D2AFAB5BE009A6F00 /* SignupView.swift in Sources */,
 				16FDAFB52AFB524E00B9DE36 /* viewRouter.swift in Sources */,
 				16FDAFD12AFB67CF00B9DE36 /* Playground2.swift in Sources */,
+				16FDAFE52AFC6BE000B9DE36 /* WorldView.swift in Sources */,
 				0A6342BA2AF9C63B0098F315 /* ContentView.swift in Sources */,
 				16FDAFDD2AFB7D3F00B9DE36 /* ImageViewModal.swift in Sources */,
 				0AE4E87F2AFB1231002BC7BD /* PersonajeEscogido.swift in Sources */,
@@ -263,6 +282,7 @@
 				0A2AF73E2AFBE88B007357D9 /* Llegada2.swift in Sources */,
 				0A9BC8D92AFA091900C5903E /* NoteView.swift in Sources */,
 				0AC60C542AFADCA700F68C9D /* LlegadaHernan.swift in Sources */,
+				16FDAFE32AFC6AAE00B9DE36 /* CustomSceneView.swift in Sources */,
 				16FDAFC92AFB679C00B9DE36 /* SadNightView.swift in Sources */,
 				16FDAFD92AFB795F00B9DE36 /* PencilKitCanvasView.swift in Sources */,
 				0AFF3C892AFB052000235888 /* EscogePersonaje.swift in Sources */,

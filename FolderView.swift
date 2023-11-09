@@ -13,7 +13,7 @@ struct FolderView: View {
     var body: some View {
         List {
             ForEach(notes){ note in
-                Text(note.title)
+                Text("aaaaaaaa")
             }
         }
         .navigationTitle(folderName)
