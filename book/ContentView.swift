@@ -60,7 +60,7 @@ struct MainView: View {
                                 Text("Comienza tu aventura")
                     ){
                         
-                        NavigationLink(destination: EscogePersonajeView(unlockPersonajeView: $isPersonajeViewUnlocked)){
+                        NavigationLink(destination: EscogePersonajeView(unlockPersonajeView: $isPersonajeViewUnlocked), tag: "FirstView", selection: $viewRouter.selectedView){
                             Text("✍️ Escoge tu personaje")
                             
                         }
@@ -74,7 +74,7 @@ struct MainView: View {
                     
                     Section(header:
                                 Text("Llegada Hernán Cortés")
-                        .foregroundStyle(isHernanViewUnlocked ? Color.black : Color.gray)
+                        .foregroundStyle(isHernanViewUnlocked ? Color.white : Color.gray)
                     ){
                         NavigationLink(destination: LlegadaHernanView( unlockHernanView2: $isHernanView2Unlocked), tag: "HernanC", selection: $viewRouter.selectedView) {
                             Text("⛵️ Un Largo Viaje")
@@ -106,7 +106,7 @@ struct MainView: View {
                     
                     Section(header:
                                 Text("Un encuentro inesperado")
-                        .foregroundStyle(isEncuentro2ViewUnlocked ? Color.black : Color.gray)
+                        .foregroundStyle(isEncuentro2ViewUnlocked ? Color.white : Color.gray)
                     ){
                         NavigationLink(destination: EncuentroView(unlockEncuentro2: $isEncuentro2ViewUnlocked), tag: "Encuentro", selection: $viewRouter.selectedView) {
                             Text("🔗 Prisionero de la Ciudad Pérdida")
@@ -122,7 +122,7 @@ struct MainView: View {
                     }
                     Section(header:
                                 Text("La noche triste")
-                        .foregroundStyle(isSadNightViewUnlocked ? Color.black : Color.gray)
+                        .foregroundStyle(isSadNightViewUnlocked ? Color.white : Color.gray)
                     ){
                         NavigationLink(destination: SadNightView(unlocksadnight2: $isSadNight2ViewUnlocked), tag: "SadNight", selection: $viewRouter.selectedView) {
                             Text("🌙 La noche triste")
@@ -151,7 +151,7 @@ struct MainView: View {
                     }
                     Section(header:
                                 Text("La caída de Tenochtitlan")
-                        .foregroundStyle(isCaidaViewUnlocked ? Color.black : Color.gray)
+                        .foregroundStyle(isCaidaViewUnlocked ? Color.white : Color.gray)
                     ){
                         NavigationLink(destination: CaidaView(unlockcaida2: $isCaida2ViewUnlocked), tag: "Caida", selection: $viewRouter.selectedView) {
                             Text("🤒 La primera pandemia")
@@ -187,8 +187,9 @@ struct MainView: View {
                 }
                 
                 .listStyle(SidebarListStyle())
+                .background(Color("List BG"))
+                .scrollContentBackground(.hidden)
                 
-                .frame(minWidth: 200, idealWidth: 250, maxWidth: 300, maxHeight: .infinity)
                 .navigationTitle("Nueva Aventura")
                 
             }
