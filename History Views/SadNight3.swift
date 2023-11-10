@@ -1,13 +1,17 @@
+//
+//  SadNight3.swift
+//  book
+//
+//  Created by Daniela Valencia on 08/11/23.
+//
 
 import SwiftUI
 
-struct EncuentroView: View {
-
+struct SadNight3: View {
         @EnvironmentObject var viewRouter: ViewRouter
-        @Binding var unlockEncuentro2: Bool
+        @Binding var unlocksadnight4: Bool
         @State private var poppover = false
         var body: some View {
-            
             
             VStack{
                 HStack(spacing:10){
@@ -39,7 +43,7 @@ struct EncuentroView: View {
                                     .foregroundStyle(Color.colorMOC)
                                 
                                 VStack{
-                                    Text("Hernán Cortés me llevó como prisionero para controlar la ciudad de tenochtitlan. ")
+                                    Text("Hernán Cortés regresó y sitiaron la ciudad de tenochtitlan.")
                                         .font(.headline)
                                         .padding()
                                         .foregroundStyle(Color.white)
@@ -68,25 +72,28 @@ struct EncuentroView: View {
                             
                                 HStack(spacing:10){
                                     ZStack{
-                                        Image("Moc")
+                                        Image("Hernan")
                                             .resizable()
                                             .scaledToFill()
-                                            .frame(width: 300, height: 400)
+                                            .frame(width: 310, height: 410)
                                             .clipped()
-                                            .offset(x:80, y:25)
-                                
-                                    
+                                            .offset(x:-40, y:25)
                                         VStack{
-                                            Image("Hernan")
+                                            Image("luna")
                                                 .resizable()
-                                                .scaledToFill()
-                                                .frame(width: 290, height: 370)
-                                                .clipped()
-                                                .offset(x:-40, y:25)
-                                        
+                                                .padding()
+                                                .frame(width: 300, height: 200)
+                                                .offset(x:-10, y:-300)
                                             
                                         }
+                                        
+                                
+                                  
                                     }
+                                    
+                                       
+                                        
+                                            
                                     
                                     
                                     
@@ -112,8 +119,8 @@ struct EncuentroView: View {
                         
                     }
                 Button(action: {
-                    unlockEncuentro2 = true
-                    viewRouter.selectedView = "Encuentro2"
+                    unlocksadnight4 = true
+                    viewRouter.selectedView = "SadNight4"
                 }) {
                     Text("Siguiente")
                         .padding()
@@ -133,11 +140,15 @@ struct EncuentroView: View {
                 
                 
                 
-                .navigationTitle("⚔️ Un Encuentro Inesperado")
+                .navigationTitle("🌙 La noche triste")
             }
             
             
         }
         
+
+
+
+
 
 

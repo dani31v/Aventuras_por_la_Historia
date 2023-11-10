@@ -27,7 +27,7 @@ struct LlegadaHernanView: View {
                         
                         ZStack{
                             RoundedRectangle(cornerRadius: 40)
-                                .foregroundStyle(Color.accentColor)
+                                .foregroundStyle(Color.colorMOC)
                             
                             VStack{
                                 Text("En el año 1519, llegó un hombre llamado Hernán Cortés a nuestras tierras viajando desde un lugar muy lejano llamado: España")
@@ -44,42 +44,14 @@ struct LlegadaHernanView: View {
                         
                     }
                 }
-                HStack{
-                    VStack{
-                        Button(action: {
-                            viewRouter.selectedView = "Llegada2"
-                        }) {
-                            Text("Hernán decidirá hacer amigos ")
-                                .padding()
-                                .background(Color.accentColor)
-                                .foregroundColor(.white)
-                                .cornerRadius(15)
-                            
-                            
-                        }
-                    }
-                    VStack{
-                        Button(action: {
-                            viewRouter.selectedView = "Llegada2"
-                        }) {
-                            Text("Decidirá seguir solo su camino...")
-                                .padding()
-                                .background(Color.accentColor)
-                                .foregroundColor(.white)
-                                .cornerRadius(15)
-                            
-                            
-                        }
-                    }
-                    
-                }
+                
                 Button(action: {
                     unlockHernanView2 = true
                     viewRouter.selectedView = "HernanC2"
                 }) {
                     Text("Siguiente")
                         .padding()
-                        .background(Color.accentColor)
+                        .background(Color.colorMOC)
                         .foregroundColor(.white)
                         .cornerRadius(15)
 

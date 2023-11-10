@@ -1,4 +1,4 @@
-//
+
 //  Llegada2.swift
 //  book
 //
@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-struct Llegada2View: View {
+struct Llegada4View: View {
     @EnvironmentObject var viewRouter: ViewRouter
-    @Binding var unlockHernanView3: Bool
-    
+    @Binding var unlockEncuentro: Bool
     @State private var poppover = false
     var body: some View {
         
@@ -45,7 +44,7 @@ struct Llegada2View: View {
                                 .foregroundStyle(Color.colorMOC)
                             
                             VStack{
-                                Text("Cortés se hizo amigo de algunos indígenas especialmente de los tlaxcaltecas, se hicieron aliados y ayudaron a Cortés a derrotarnos. ")
+                                Text("Después de la batalla les dimos regalos y a la Malinche, ella fue muy importante para Hernán Cortés ya que sabía comunicarse con los españoles y con nosotros los indigenas. ")
                                     .font(.headline)
                                     .padding()
                                     .foregroundStyle(Color.white)
@@ -57,10 +56,10 @@ struct Llegada2View: View {
                         }
                             .padding()
                             
-                            .frame(width: 400, height: 250)
+                            .frame(width: 300, height: 270)
                             
                             .transition(.slide)
-                            .offset(x:200,y:-200)
+                            .offset(x:200,y:-190)
         
                             
                         
@@ -69,29 +68,29 @@ struct Llegada2View: View {
                         
                     }
                     HStack{
-                        
-                        
-                        
+
                         ZStack{
                         
                             HStack(spacing:10){
                                 ZStack{
-                                    Image("Hernan")
+                                    Image("Malinche")
                                         .resizable()
                                         .scaledToFill()
                                         .frame(width: 300, height: 400)
                                         .clipped()
                                         .offset(x:80, y:25)
+                            
                                    
-                                    
+                    
                                     
                                     VStack{
-                                        Image("Xico")
+                                        Image("Hernan")
                                             .resizable()
                                             .scaledToFill()
-                                            .frame(width: 300, height: 400)
+                                            .frame(width: 290, height: 370)
                                             .clipped()
                                             .offset(x:-40, y:25)
+                                    
                                         
                                     }
                                 }
@@ -115,14 +114,13 @@ struct Llegada2View: View {
                     }
                     
                 }
-                
-                
-                
-                
-            }
+              
+                   
+                    
+                }
             Button(action: {
-                unlockHernanView3 = true
-                viewRouter.selectedView = "HernanC3"
+                unlockEncuentro = true
+                viewRouter.selectedView = "Encuentro"
             }) {
                 Text("Siguiente")
                     .padding()
@@ -133,6 +131,11 @@ struct Llegada2View: View {
                 
                 
             }
+                
+                
+                
+            }
+           
             
             
             
@@ -143,10 +146,4 @@ struct Llegada2View: View {
         
     }
     
-    
-    
-    
-    
-}
-
 

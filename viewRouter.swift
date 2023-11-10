@@ -8,5 +8,6 @@
 import SwiftUI
 
 class ViewRouter: ObservableObject {
-    @Published var selectedView: String? = nil
+    @Published var selectedView: String? = "WorldView"
+    @Published var selectedViewDecision: String? = "WorldView"
 }

@@ -1,4 +1,4 @@
-//
+
 //  Llegada2.swift
 //  book
 //
@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-struct Llegada2View: View {
+struct Llegada3View: View {
     @EnvironmentObject var viewRouter: ViewRouter
-    @Binding var unlockHernanView3: Bool
-    
+    @Binding var unlockHernanView4: Bool
     @State private var poppover = false
     var body: some View {
         
@@ -45,7 +44,7 @@ struct Llegada2View: View {
                                 .foregroundStyle(Color.colorMOC)
                             
                             VStack{
-                                Text("Cortés se hizo amigo de algunos indígenas especialmente de los tlaxcaltecas, se hicieron aliados y ayudaron a Cortés a derrotarnos. ")
+                                Text("Al llegar Hernán Cortés, hubo una batalla. ¿Quieres entrar?")
                                     .font(.headline)
                                     .padding()
                                     .foregroundStyle(Color.white)
@@ -57,7 +56,7 @@ struct Llegada2View: View {
                         }
                             .padding()
                             
-                            .frame(width: 400, height: 250)
+                            .frame(width: 300, height: 270)
                             
                             .transition(.slide)
                             .offset(x:200,y:-200)
@@ -69,29 +68,64 @@ struct Llegada2View: View {
                         
                     }
                     HStack{
-                        
-                        
-                        
+
                         ZStack{
                         
                             HStack(spacing:10){
                                 ZStack{
-                                    Image("Hernan")
+                                    Image("Malinche")
                                         .resizable()
                                         .scaledToFill()
                                         .frame(width: 300, height: 400)
                                         .clipped()
                                         .offset(x:80, y:25)
-                                   
-                                    
+                            
+                                        VStack{
+                                            Spacer()
+                                                .frame(
+                                                height:400)
+                                            Button(action: {
+                                                unlockHernanView4 = true
+                                                viewRouter.selectedView = "HernanC4"
+                                               
+                                            }) {
+                                                Text("No")
+                                                    .padding()
+                                                    .background(Color.colorMOC)
+                                                    .foregroundColor(.white)
+                                                    .cornerRadius(15)
+                                                
+                                                
+                                            }
+                                            .offset(x:80, y:25)
+                                        }
+                    
                                     
                                     VStack{
-                                        Image("Xico")
+                                        Image("Hernan")
                                             .resizable()
                                             .scaledToFill()
-                                            .frame(width: 300, height: 400)
+                                            .frame(width: 290, height: 370)
                                             .clipped()
                                             .offset(x:-40, y:25)
+                                        VStack{
+                                            Spacer()
+                                            Button(action: {
+                                                print(viewRouter.selectedView)
+                                            
+                                                viewRouter.selectedViewDecision = "llegadasi"
+                                                
+                                                print(viewRouter.selectedViewDecision)
+                                            }) {
+                                                Text("Si")
+                                                    .padding()
+                                                    .background(Color.colorMOC)
+                                                    .foregroundColor(.white)
+                                                    .cornerRadius(15)
+   
+                                            }
+                                            .offset(x:-40, y:25)
+                                        }
                                         
                                     }
                                 }
@@ -115,24 +149,15 @@ struct Llegada2View: View {
                     }
                     
                 }
-                
-                
-                
-                
-            }
-            Button(action: {
-                unlockHernanView3 = true
-                viewRouter.selectedView = "HernanC3"
-            }) {
-                Text("Siguiente")
-                    .padding()
-                    .background(Color.colorMOC)
-                    .foregroundColor(.white)
-                    .cornerRadius(15)
+              
+                   
+                    
+                }
                 
                 
                 
             }
+           
             
             
             
@@ -143,10 +168,3 @@ struct Llegada2View: View {
         
     }
     
-    
-    
-    
-    
-}
-
-

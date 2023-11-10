@@ -17,6 +17,7 @@
 import SwiftUI
 import SceneKit
 struct MainView: View {
+    
     @State private var scene: SCNScene?
     @ObservedObject var mystory: myStory
     @State var searchString: String = ""
@@ -25,6 +26,7 @@ struct MainView: View {
     @State private var llegadaHernanButtonP = false
     @EnvironmentObject var viewRouter: ViewRouter
     @State private var selectedView: String? = "WorldView"
+    @State private var selectedViewDesicion: String? = nil
     
     @EnvironmentObject var authViewModel: AuthViewModel
     
@@ -32,177 +34,203 @@ struct MainView: View {
     @State private var isPersonajeViewUnlocked = false
     @State private var isHernanViewUnlocked = false
     @State private var isHernanView2Unlocked = false
+    @State private var isHernanView3Unlocked = false
+    @State private var isHernanViewSiUnlocked = false
+    @State private var isHernanViewNoUnlocked = false
+    @State private var isHernanView4Unlocked = false
     @State private var isEncuentroViewUnlocked = false
+    @State private var isEncuentro2ViewUnlocked = false
     @State private var isSadNightViewUnlocked = false
+    @State private var isSadNight2ViewUnlocked = false
+    @State private var isSadNight3ViewUnlocked = false
+    @State private var isSadNight4ViewUnlocked = false
     @State private var isCaidaViewUnlocked = false
+    @State private var isCaida2ViewUnlocked = false
+    @State private var isCaida3ViewUnlocked = false
+    @State private var isCaida4ViewUnlocked = false
+    @State private var isCaida5ViewUnlocked = false
+    
     
     var body: some View {
         NavigationView {
-            List {
-                
-                NavigationLink(destination: EscogePersonajeView(unlockPersonajeView: $isPersonajeViewUnlocked)){
-                    Text("Escoge tu personaje")
+            ZStack{
+                List {
+                    
+                    Section(header:
+                                Text("Comienza tu aventura")
+                    ){
+                        
+                        NavigationLink(destination: EscogePersonajeView(unlockPersonajeView: $isPersonajeViewUnlocked)){
+                            Text("Escoge tu personaje")
+                            
+                        }
+                        
+                        NavigationLink(destination: PersonajeView(unlockHernanView: $isHernanViewUnlocked), tag: "PersonajeView", selection: $viewRouter.selectedView) {
+                            Text("🧑‍🦲 Tu personaje")
+                        }
+                        .disabled(!isPersonajeViewUnlocked)
+                    }
+                    
+                    
+                    Section(header:
+                                Text("Llegada Hernán Cortés")
+                        .foregroundStyle(isHernanViewUnlocked ? Color.black : Color.gray)
+                    ){
+                        NavigationLink(destination: LlegadaHernanView( unlockHernanView2: $isHernanView2Unlocked), tag: "HernanC", selection: $viewRouter.selectedView) {
+                            Text("⛵️ Un Largo Viaje")
+                        }
+                        .disabled(!isHernanViewUnlocked)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        NavigationLink(destination: Llegada2View( unlockHernanView3: $isHernanView3Unlocked), tag: "HernanC2", selection: $viewRouter.selectedView) {
+                            Text("🤝 Amigos y aliados")
+                        }
+                        .disabled(!isHernanView2Unlocked)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        NavigationLink(destination: Llegada3View(unlockHernanView4: $isHernanView4Unlocked), tag: "HernanC3", selection: $viewRouter.selectedView){
+                            Text("🛡️ Batalla Centla")}
+                        // }
+                        .disabled(!isHernanView3Unlocked)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        NavigationLink(destination: Llegada4View( unlockEncuentro: $isEncuentroViewUnlocked), tag: "HernanC4", selection: $viewRouter.selectedView) {
+                            Text("❤️ Un amor puro")
+                        }
+                        .disabled(!isHernanView4Unlocked)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                    }
+                    
+                    
+                    
+                    Section(header:
+                                Text("Un encuentro inesperado")
+                        .foregroundStyle(isEncuentro2ViewUnlocked ? Color.black : Color.gray)
+                    ){
+                        NavigationLink(destination: EncuentroView(unlockEncuentro2: $isEncuentro2ViewUnlocked), tag: "Encuentro", selection: $viewRouter.selectedView) {
+                            Text("")
+                        }
+                        .disabled(!isEncuentroViewUnlocked)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        NavigationLink(destination: Encuentro2View(unlockSadNightView: $isSadNightViewUnlocked), tag: "Encuentro2", selection: $viewRouter.selectedView) {
+                            Text("⚔️ Un Encuentro Inesperado")
+                        }
+                        .disabled(!isEncuentro2ViewUnlocked)
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                    Section(header:
+                                Text("La noche triste")
+                        .foregroundStyle(isSadNightViewUnlocked ? Color.black : Color.gray)
+                    ){
+                        NavigationLink(destination: SadNightView(unlocksadnight2: $isSadNight2ViewUnlocked), tag: "SadNight", selection: $viewRouter.selectedView) {
+                            Text("🌙 La noche triste")
+                        }
+                        .disabled(!isSadNightViewUnlocked)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        NavigationLink(destination: SadNight2(unlocksadnight3: $isSadNight3ViewUnlocked), tag: "SadNight2", selection: $viewRouter.selectedView) {
+                            Text("🔥 La revelión")
+                        }
+                        .disabled(!isSadNight2ViewUnlocked)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        NavigationLink(destination: SadNight3(unlocksadnight4: $isSadNight4ViewUnlocked), tag: "SadNight3", selection: $viewRouter.selectedView) {
+                            Text("🛖 El robo de Tenochtitlan")
+                        }
+                        .disabled(!isSadNight3ViewUnlocked)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        NavigationLink(destination: SadNight4(unlockcaida: $isCaidaViewUnlocked), tag: "SadNight4", selection: $viewRouter.selectedView) {
+                            Text("🕊️ La despedida de Moctezuma")
+                        }
+                        .disabled(!isSadNight4ViewUnlocked)
+                        
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                    Section(header:
+                                Text("La caída de Tenochtitlan")
+                        .foregroundStyle(isCaidaViewUnlocked ? Color.black : Color.gray)
+                    ){
+                        NavigationLink(destination: CaidaView(unlockcaida2: $isCaida2ViewUnlocked), tag: "Caida", selection: $viewRouter.selectedView) {
+                            Text("⚠️ Tenochtitlan se cae")
+                        }
+                        .disabled(!isCaidaViewUnlocked)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        
+                        NavigationLink(destination: CaidaView2(unlockcaida3: $isCaida3ViewUnlocked), tag: "Caida2", selection: $viewRouter.selectedView) {
+                            Text("🤒 La primera pandemia")
+                        }
+                        .disabled(!isCaida2ViewUnlocked)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        NavigationLink(destination: CaidaView3(unlockcaida4: $isCaida4ViewUnlocked), tag: "Caida3", selection: $viewRouter.selectedView) {
+                            Text("🍽️ Platos Vacíos")
+                        }
+                        .disabled(!isCaida3ViewUnlocked)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        NavigationLink(destination: CaidaView4(unlockcaida5: $isCaida5ViewUnlocked), tag: "Caida4", selection: $viewRouter.selectedView) {
+                            Text("🛕 La invasión a la ciudad")
+                        }
+                        .disabled(!isCaida4ViewUnlocked)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        NavigationLink( destination: CaidaView5(), tag: "Caida5", selection: $viewRouter.selectedView) {
+                            Text("✨ El final de la hisotria")
+                        }
+                        .disabled(!isCaida5ViewUnlocked)
+                        .buttonStyle(PlainButtonStyle())
+                    }
                 }
                 
-                NavigationLink(destination: PersonajeView(unlockHernanView: $isHernanViewUnlocked), tag: "PersonajeView", selection: $viewRouter.selectedView) {
-                    Text("🧑‍🦲 Tu personaje")
-                }
-                .disabled(!isPersonajeViewUnlocked)
+                .listStyle(SidebarListStyle())
                 
-                
-                NavigationLink(destination: LlegadaHernanView( unlockHernanView2: $isHernanView2Unlocked), tag: "HernanC", selection: $viewRouter.selectedView) {
-                    Text("⛵️ Llegó Hernán Cortés")
-                }
-                .disabled(!isHernanView2Unlocked)
-                .buttonStyle(PlainButtonStyle())
-                
-                NavigationLink(destination: Llegada2View( unlockEncuentro: $isEncuentroViewUnlocked), tag: "HernanC2", selection: $viewRouter.selectedView) {
-                    Text("⛵️ Llegó Hernán Cortés")
-                }
-                .disabled(!isHernanViewUnlocked)
-                .buttonStyle(PlainButtonStyle())
-                
-                
-                NavigationLink(destination: EncuentroView(unlockSadNightView: $isSadNightViewUnlocked), tag: "Encuentro", selection: $viewRouter.selectedView) {
-                    Text("⚔️ Un Encuentro Inesperado")
-                }
-                .disabled(!isEncuentroViewUnlocked)
-                .buttonStyle(PlainButtonStyle())
-                
-                NavigationLink(destination: SadNightView(unlockCaida: $isCaidaViewUnlocked), tag: "SadNight", selection: $viewRouter.selectedView) {
-                    Text("🌙 La noche triste")
-                }
-                .disabled(!isSadNightViewUnlocked)
-                .buttonStyle(PlainButtonStyle())
-                
-                NavigationLink(destination: CaidaView(), tag: "Caida", selection: $viewRouter.selectedView) {
-                    Text("⚠️ Tenochtitlan se cae")
-                }
-                .disabled(!isCaidaViewUnlocked)
-                .buttonStyle(PlainButtonStyle())
-                
-                
-                
-                
+                .frame(minWidth: 200, idealWidth: 250, maxWidth: 300, maxHeight: .infinity)
+                .navigationTitle("Nueva Aventura")
                 
             }
-            .listStyle(SidebarListStyle())
-            
-            .frame(minWidth: 200, idealWidth: 250, maxWidth: 300, maxHeight: .infinity)
-            .navigationTitle("Nueva Aventura")
             
             
-            
-            
-            // Vista que se mostrará al seleccionar un botón
-            if let selectedView = selectedView {
-                switch selectedView {
+                
                     
-                case "WorldView":
-                    WorldView(scene: $scene)
+            if selectedView != nil {
+                        switch viewRouter.selectedViewDecision {
+                            
+                        case "WorldView":
+                            
+                            WorldView(scene: $scene)
                                 .onAppear {
+                                    print("World Kike")
                                     // Configura tu escena de SceneKit aquí
                                     self.scene = SCNScene(named: "mundo.scn")
                                     // Asegúrate de configurar la cámara y cualquier otra configuración inicial aquí
                                 }
-                    
-                default:
-                    Text("Vista no encontrada")
+                            
+                        case "llegadasi":
+                          
+                            LlegadaSiView()
+                            
+                        default:
+                            Text("Vista no encontrada")
+                        }
+                    }
                 }
+        
+
+        
             }
             
         }
-        
-        
-        
-    }
-}
 
 
-struct NotesView: View {
-    var body: some View {
-        Text("Tus notas abcd")
-    }
-}
-
-
-struct FolderCell: View {
-    var name: String
-    var body: some View {
-        let folder = Folder(name: "Aventuras", notes: [])
-        NavigationLink(destination:FolderView(folderName: folder.name, notes:folder.notes)){
-            HStack {
-                Image(systemName: "folder")
-                Text(name)
-            }
-        }
-    }
-}
-
-struct CreateNewFolder: View {
-    @ObservedObject var mystory: myStory
-    @Binding var showingPopover: Bool
-    @State var NewFolderName = ""
-    init(_ showingPopover: Binding<Bool>, with mystory: myStory){
-        self._showingPopover = showingPopover
-        self.mystory = mystory
-    }
     
-    var body: some View {
-        TextField("Name", text: $NewFolderName)
-        GeometryReader{ geo in
-            ZStack{
-                RoundedRectangle(cornerRadius: 7)
-                    .fill(Color(.systemGray3))
-                    .frame(width: 500, height: 500, alignment: .center)
-                VStack{
-                    Text("New Folder")
-                        .font(.headline)
-                    Text("Enter a name for this folder")
-                        .font(.subheadline)
-                    Spacer()
-                    TextField("Name", text: $NewFolderName)
-                        .foregroundColor(.black)
-                        .frame(width:200, height: 10)
-                        .padding()
-                        .background(Color(.white))
-                        .cornerRadius(7)
-                        .accentColor(.blue)
-                    Spacer()
-                    Color.gray.frame(width:300, height: CGFloat(1))
-                    Spacer()
-                    HStack{
-                        
-                        Button(action: {print("Cancel")}){
-                            Text("Cancel")
-                                .frame(maxWidth: .infinity)
-                        }
-                        Button(action: {mystory.folders.append(Folder(name: NewFolderName))
-                            showingPopover.toggle()}){
-                                
-                                Text("Enter")
-                                    .frame(maxWidth: .infinity)
-                                
-                            }
-                    }
-                }
-                
-                .frame(width:geo.size.width*0.50, height: geo.size.width*0.25)
-            }
-            .frame(width: 1230 , height: 750, alignment: .center)
-        }
-        
-    }
     
-}
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        let testNotes = myStory()
-        testNotes.folders = testFolders
-        return MainView(mystory: testNotes)
-    }
-}
-
-
-
+    
+    
+    
+    
+    
 

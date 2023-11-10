@@ -17,6 +17,7 @@ struct PersonajeView: View {
                 .font(.system(size: 40))
                 .foregroundColor(.colorMOC)
             HStack{
+                
                 Button(action:{showingPopover.toggle()}){
                     Image("Moc")
                         .resizable()
@@ -24,16 +25,13 @@ struct PersonajeView: View {
                         .frame(width: 300, height: 500)
                         .clipped()
 
-                        
-                       
-                    
-                    
+     
                     ZStack{
                         RoundedRectangle(cornerRadius: 40)
                             .foregroundStyle(Color("ColorMOC"))
                         
                         VStack{
-                            Text("Hola Nativo! Yo soy el líder de los mexicas cuando los españoles llegaron y voy a contarte el lo que sucedió.                                   Acompañame a esta historia y Vamos a jugar!")
+                            Text("Hola Nativo! Yo soy el líder de los mexicas cuando los españoles llegaron y voy a contarte el lo que sucedió.        Acompañame a esta historia.\n¡Vamos a jugar!")
                                 .font(.headline)
                                 .padding()
                                 .foregroundStyle(Color.white)

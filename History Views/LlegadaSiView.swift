@@ -1,10 +1,16 @@
+//
+//  LlegadaSiView.swift
+//  book
+//
+//  Created by Daniela Valencia on 09/11/23.
+//
 
 import SwiftUI
 
-struct EncuentroView: View {
-
+struct LlegadaSiView: View {
+  
         @EnvironmentObject var viewRouter: ViewRouter
-        @Binding var unlockEncuentro2: Bool
+       
         @State private var poppover = false
         var body: some View {
             
@@ -39,7 +45,7 @@ struct EncuentroView: View {
                                     .foregroundStyle(Color.colorMOC)
                                 
                                 VStack{
-                                    Text("Hernán Cortés me llevó como prisionero para controlar la ciudad de tenochtitlan. ")
+                                    Text("Aunque fuimos participes de la batalla, los españoles nos ganaron ")
                                         .font(.headline)
                                         .padding()
                                         .foregroundStyle(Color.white)
@@ -51,10 +57,10 @@ struct EncuentroView: View {
                             }
                                 .padding()
                                 
-                                .frame(width: 300, height: 270)
+                                .frame(width: 400, height: 250)
                                 
                                 .transition(.slide)
-                                .offset(x:200,y:-190)
+                                .offset(x:200,y:-200)
             
                                 
                             
@@ -63,27 +69,29 @@ struct EncuentroView: View {
                             
                         }
                         HStack{
-
+                            
+                            
+                            
                             ZStack{
                             
                                 HStack(spacing:10){
                                     ZStack{
-                                        Image("Moc")
+                                        Image("Hernan")
                                             .resizable()
                                             .scaledToFill()
                                             .frame(width: 300, height: 400)
                                             .clipped()
                                             .offset(x:80, y:25)
-                                
-                                    
+                                       
+                                        
+                                        
                                         VStack{
-                                            Image("Hernan")
+                                            Image("tristec")
                                                 .resizable()
                                                 .scaledToFill()
-                                                .frame(width: 290, height: 370)
+                                                .frame(width: 300, height: 400)
                                                 .clipped()
                                                 .offset(x:-40, y:25)
-                                        
                                             
                                         }
                                     }
@@ -107,13 +115,14 @@ struct EncuentroView: View {
                         }
                         
                     }
-                  
-                       
-                        
-                    }
+                    
+                    
+                    
+                    
+                }
                 Button(action: {
-                    unlockEncuentro2 = true
-                    viewRouter.selectedView = "Encuentro2"
+                    
+                    viewRouter.selectedView = "HernanC4"
                 }) {
                     Text("Siguiente")
                         .padding()
@@ -124,20 +133,20 @@ struct EncuentroView: View {
                     
                     
                 }
-                    
-                    
-                    
-                }
-               
                 
                 
                 
                 
-                .navigationTitle("⚔️ Un Encuentro Inesperado")
+                .navigationTitle("⛵️ Llegó Hernán Cortés")
             }
             
             
         }
         
+        
+        
+        
+        
+    }
 
 
