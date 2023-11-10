@@ -14,10 +14,9 @@ struct LlegadaHernanView: View {
     @State private var poppover = false
     var body: some View {
         
-        ScrollView{
+   
             VStack{
                 HStack{
-                    Button(action:{poppover.toggle()}){
                         Image("Moc")
                             .resizable()
                             .scaledToFill()
@@ -26,12 +25,14 @@ struct LlegadaHernanView: View {
                         
                         
                         ZStack{
+                            Spacer()
                             RoundedRectangle(cornerRadius: 40)
+                                .frame(width:300, height:350)
                                 .foregroundStyle(Color.colorMOC)
                             
                             VStack{
                                 Text("En el año 1519, llegó un hombre llamado Hernán Cortés a nuestras tierras viajando desde un lugar muy lejano llamado: España")
-                                    .font(.headline)
+                                    .font(.system(size:25))
                                     .padding()
                                     .foregroundStyle(Color.white)
                                
@@ -39,10 +40,10 @@ struct LlegadaHernanView: View {
                             .padding()
                         }
                         .frame(width: 300, height: 250)
-                        .transition(.slide)
                         
                         
-                    }
+                        
+                    
                 }
                 
                 Button(action: {
@@ -50,7 +51,10 @@ struct LlegadaHernanView: View {
                     viewRouter.selectedView = "HernanC2"
                 }) {
                     Text("Siguiente")
-                        .padding()
+                        .font(.system(size:30))
+                        .bold()
+                        .padding(.vertical, 20)
+                        .frame(width:200)
                         .background(Color.colorMOC)
                         .foregroundColor(.white)
                         .cornerRadius(15)
@@ -61,7 +65,7 @@ struct LlegadaHernanView: View {
                 
             }
             .navigationTitle("⛵️ Un Largo Viaje")
-        }
+        
         
         
     }

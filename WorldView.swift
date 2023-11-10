@@ -75,10 +75,15 @@ struct WorldView: UIViewRepresentable {
 struct ContentWorldView: View {
     @State private var scene: SCNScene? = SCNScene(named: "mundo.scn")
     @EnvironmentObject var viewRouter: ViewRouter
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        WorldView(scene: $scene)
-            .edgesIgnoringSafeArea(.all)
-            .environmentObject(viewRouter)
+        ZStack{
+            (colorScheme == .dark ? Color("ColorFondo") : Color("ColorFondo"))
+                .edgesIgnoringSafeArea(.all)
+            WorldView(scene: $scene)
+                .edgesIgnoringSafeArea(.all)
+                .environmentObject(viewRouter)
+        }
     }
 }

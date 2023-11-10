@@ -25,6 +25,7 @@
 		0A81D3CC2AFCC9AE001EDDF1 /* CaidaView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A81D3CB2AFCC9AE001EDDF1 /* CaidaView3.swift */; };
 		0A81D3CE2AFCCA8B001EDDF1 /* CaidaView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A81D3CD2AFCCA8B001EDDF1 /* CaidaView4.swift */; };
 		0A81D3D02AFCCB3A001EDDF1 /* CaidaView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A81D3CF2AFCCB3A001EDDF1 /* CaidaView5.swift */; };
+		0A84E6672AFEEC2400338CD6 /* Colorextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A84E6662AFEEC2400338CD6 /* Colorextension.swift */; };
 		0A9BC8D72AFA04D200C5903E /* FolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BC8D62AFA04D200C5903E /* FolderView.swift */; };
 		0A9BC8D92AFA091900C5903E /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BC8D82AFA091900C5903E /* NoteView.swift */; };
 		0AA2637D2AFAB5BE009A6F00 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA2637C2AFAB5BE009A6F00 /* SignupView.swift */; };
@@ -69,6 +70,7 @@
 		0A81D3CB2AFCC9AE001EDDF1 /* CaidaView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaidaView3.swift; sourceTree = "<group>"; };
 		0A81D3CD2AFCCA8B001EDDF1 /* CaidaView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaidaView4.swift; sourceTree = "<group>"; };
 		0A81D3CF2AFCCB3A001EDDF1 /* CaidaView5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaidaView5.swift; sourceTree = "<group>"; };
+		0A84E6662AFEEC2400338CD6 /* Colorextension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorextension.swift; sourceTree = "<group>"; };
 		0A9BC8D62AFA04D200C5903E /* FolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderView.swift; sourceTree = "<group>"; };
 		0A9BC8D82AFA091900C5903E /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		0AA2637C2AFAB5BE009A6F00 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				0AA2637E2AFAB69E009A6F00 /* book.entitlements */,
 				0AA2637C2AFAB5BE009A6F00 /* SignupView.swift */,
 				0A6342B92AF9C63B0098F315 /* ContentView.swift */,
+				0A84E6662AFEEC2400338CD6 /* Colorextension.swift */,
 				0A6342BB2AF9C63E0098F315 /* Assets.xcassets */,
 				0A6342BD2AF9C63E0098F315 /* Preview Content */,
 			);
@@ -161,6 +164,9 @@
 			isa = PBXGroup;
 			children = (
 				0AC60C532AFADCA700F68C9D /* LlegadaHernan.swift */,
+				0A2AF73D2AFBE88B007357D9 /* Llegada2.swift */,
+				0A7254A62AFC83FA000C40A9 /* Llegada4.swift */,
+				0A7254A42AFC7D4B000C40A9 /* Llegada3.swift */,
 				16FDAFC62AFB679300B9DE36 /* EncuentroView.swift */,
 				0A817AC22AFC8AAF001E2220 /* Encuentro2View.swift */,
 				16FDAFC82AFB679C00B9DE36 /* SadNightView.swift */,
@@ -172,9 +178,6 @@
 				0A81D3CB2AFCC9AE001EDDF1 /* CaidaView3.swift */,
 				0A81D3CD2AFCCA8B001EDDF1 /* CaidaView4.swift */,
 				0A81D3CF2AFCCB3A001EDDF1 /* CaidaView5.swift */,
-				0A2AF73D2AFBE88B007357D9 /* Llegada2.swift */,
-				0A7254A42AFC7D4B000C40A9 /* Llegada3.swift */,
-				0A7254A62AFC83FA000C40A9 /* Llegada4.swift */,
 				0A70093D2AFDBEA50003A22A /* LlegadaSiView.swift */,
 				0A70093F2AFDBFC50003A22A /* LlegadaNoView.swift */,
 			);
@@ -327,6 +330,7 @@
 				16FDAFDB2AFB7B9100B9DE36 /* DrawingViewModal.swift in Sources */,
 				0A2AF73E2AFBE88B007357D9 /* Llegada2.swift in Sources */,
 				0A9BC8D92AFA091900C5903E /* NoteView.swift in Sources */,
+				0A84E6672AFEEC2400338CD6 /* Colorextension.swift in Sources */,
 				0A81D3CA2AFCC8C4001EDDF1 /* CaidaView2.swift in Sources */,
 				0AC60C542AFADCA700F68C9D /* LlegadaHernan.swift in Sources */,
 				16FDAFE32AFC6AAE00B9DE36 /* CustomSceneView.swift in Sources */,
@@ -483,7 +487,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -517,7 +521,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

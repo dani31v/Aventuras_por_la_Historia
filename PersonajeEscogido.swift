@@ -13,12 +13,12 @@ struct PersonajeView: View {
     @Binding var unlockHernanView: Bool
     var body: some View {
         VStack{
-            Text("El personaje que elegiste fue: Moctezuma")
+            Text("El personaje que elegiste fue: \n\t\t\t\t\tMoctezuma")
                 .font(.system(size: 40))
-                .foregroundColor(.colorMOC)
+                .bold()
+                .foregroundColor(.white)
             HStack{
                 
-                Button(action:{showingPopover.toggle()}){
                     Image("Moc")
                         .resizable()
                         .scaledToFill()
@@ -29,10 +29,11 @@ struct PersonajeView: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 40)
                             .foregroundStyle(Color("ColorMOC"))
+                            .frame(width:300, height:350)
                         
                         VStack{
-                            Text("Hola Nativo! Yo soy el líder de los mexicas cuando los españoles llegaron y voy a contarte el lo que sucedió.        Acompañame a esta historia.\n¡Vamos a jugar!")
-                                .font(.headline)
+                            Text("Hola Nativo! Yo soy el líder de los mexicas cuando los españoles llegaron y voy a contarte el lo que sucedió. Acompañame a esta historia!")
+                                .font(.system(size: 25))
                                 .padding()
                                 .foregroundStyle(Color.white)
                             
@@ -42,10 +43,9 @@ struct PersonajeView: View {
                     }
                     .frame(width: 250, height: 300)
            
-                    .transition(.slide)
                     
                     
-                }
+                
         }
             
             Button(action: {
@@ -53,14 +53,17 @@ struct PersonajeView: View {
                 viewRouter.selectedView = "HernanC"
             }) {
                 Text("¡Vamos a Jugar!")
-                    .padding()
+                    .font(.system(size:30))
+                    .bold()
+                    .padding(.vertical, 20)
+                    .frame(width:400)
                     .background(Color.colorMOC)
                     .foregroundColor(.white)
                     .cornerRadius(15)
             }
         }
             
-        
+            .navigationTitle("🧑‍🦲 Tu Personaje")
     
            }
        }
