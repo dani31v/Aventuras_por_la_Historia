@@ -49,7 +49,7 @@ struct WorldView: UIViewRepresentable {
                     // El usuario tocó el nodo de prueba, realiza alguna acción aquí
                     print("Box tocado")
                     DispatchQueue.main.async { // Asegúrate de modificar el estado en el hilo principal
-                        self.viewRouter.selectedView = "HernanC3"
+                        self.viewRouter.selectedView = "FirstView"
                     }
                 } else {
                     // Se tocó otra parte de la escena, realiza la acción de zoom
