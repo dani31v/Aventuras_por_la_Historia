@@ -1,20 +1,21 @@
+// WorldView.swift
 import SwiftUI
 import SceneKit
 
 struct WorldView: UIViewRepresentable {
     
     @Binding var scene: SCNScene?
-    var zoomFactor: CGFloat = 5.0 // Ajusta esto para cambiar el nivel de zoom
-    
+    var zoomFactor: CGFloat = 5.0
+    @EnvironmentObject var viewRouter: ViewRouter // Añade el environment object aquí
+
     func makeUIView(context: Context) -> SCNView {
         let view = SCNView()
-        view.allowsCameraControl = false
+        view.allowsCameraControl = true
         view.autoenablesDefaultLighting = true
         view.antialiasingMode = .multisampling2X
         view.scene = scene
         view.backgroundColor = .clear
         
-        // Añadir el reconocedor de gestos para el tap
         let tapGesture = UITapGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleTap(_:)))
         view.addGestureRecognizer(tapGesture)
         
@@ -22,42 +23,62 @@ struct WorldView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: SCNView, context: Context) {
-        // Aquí puedes actualizar la vista de SCN si es necesario.
+        uiView.scene = scene
     }
     
     func makeCoordinator() -> Coordinator {
-        Coordinator(self)
+        Coordinator(self, viewRouter: viewRouter) // Pasa el ViewRouter al Coordinator
     }
     
     class Coordinator: NSObject {
         var parent: WorldView
+        var viewRouter: ViewRouter // Almacena el ViewRouter
         
-        init(_ parent: WorldView) {
+        init(_ parent: WorldView, viewRouter: ViewRouter) {
             self.parent = parent
+            self.viewRouter = viewRouter
         }
         
         @objc func handleTap(_ gestureRecognize: UITapGestureRecognizer) {
-            let scnView = gestureRecognize.view as! SCNView
+            guard let scnView = gestureRecognize.view as? SCNView else { return }
             let location = gestureRecognize.location(in: scnView)
             let hitResults = scnView.hitTest(location, options: [:])
             
-            // Verifica si se tocó algún nodo y si ese nodo es parte del "mundo"
-            if let result = hitResults.first, result.node.name == "nombreDelNodoDelMundo" {
-                
-                // Calcular una nueva posición basada en el resultado del hitTest
-                let nodePosition = result.worldCoordinates
-                let cameraNode = scnView.pointOfView!
-                
-                // Define una nueva posición de la cámara basada en la posición tocada
-                let newPosition = SCNVector3(nodePosition.x, nodePosition.y, cameraNode.position.z - Float(parent.zoomFactor))
-                
-                // Animar la cámara hacia la nueva posición
-                SCNTransaction.begin()
-                SCNTransaction.animationDuration = 0.5
-                cameraNode.position = newPosition
-                cameraNode.look(at: nodePosition)
-                SCNTransaction.commit()
+            if let result = hitResults.first {
+                if result.node.name == "box" {
+                    // El usuario tocó el nodo de prueba, realiza alguna acción aquí
+                    print("Box tocado")
+                    DispatchQueue.main.async { // Asegúrate de modificar el estado en el hilo principal
+                        self.viewRouter.selectedView = "HernanC3"
+                    }
+                } else {
+                    // Se tocó otra parte de la escena, realiza la acción de zoom
+                    let nodePosition = result.worldCoordinates
+                    let cameraNode = scnView.pointOfView!
+                    let newPosition = SCNVector3(nodePosition.x, nodePosition.y, cameraNode.position.z - Float(parent.zoomFactor))
+                    animateCamera(to: newPosition, in: scnView, lookAt: nodePosition)
+                }
             }
         }
+        
+        func animateCamera(to position: SCNVector3, in view: SCNView, lookAt target: SCNVector3) {
+            guard let cameraNode = view.pointOfView else { return }
+            
+            SCNTransaction.begin()
+            SCNTransaction.animationDuration = 0.5
+            cameraNode.position = position
+            cameraNode.look(at: target)
+            SCNTransaction.commit()
+        }
+    }
+}
+struct ContentWorldView: View {
+    @State private var scene: SCNScene? = SCNScene(named: "mundo.scn")
+    @EnvironmentObject var viewRouter: ViewRouter
+    
+    var body: some View {
+        WorldView(scene: $scene)
+            .edgesIgnoringSafeArea(.all)
+            .environmentObject(viewRouter)
     }
 }

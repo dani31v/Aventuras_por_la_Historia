@@ -201,13 +201,7 @@ struct MainView: View {
                             
                         case "WorldView":
                             
-                            WorldView(scene: $scene)
-                                .onAppear {
-                                    print("World Kike")
-                                    // Configura tu escena de SceneKit aquí
-                                    self.scene = SCNScene(named: "mundo.scn")
-                                    // Asegúrate de configurar la cámara y cualquier otra configuración inicial aquí
-                                }
+                            ContentWorldView()
                             
                         case "llegadasi":
                           
