@@ -139,7 +139,8 @@ struct Encuentro2View: View {
                     
                     
                     
-                    .navigationTitle("⚔️ Un Encuentro Inesperado")
+                    .navigationTitle("🪖 Nuevo Líder")
+        
                 }
                 
                 

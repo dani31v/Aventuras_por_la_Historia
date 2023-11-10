@@ -140,7 +140,7 @@ struct Llegada4View: View {
             
             
             
-            .navigationTitle("⛵️ Llegó Hernán Cortés")
+            .navigationTitle("❤️ Un amor puro")
         }
         
         

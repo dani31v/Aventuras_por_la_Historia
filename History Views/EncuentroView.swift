@@ -133,7 +133,7 @@ struct EncuentroView: View {
                 
                 
                 
-                .navigationTitle("⚔️ Un Encuentro Inesperado")
+                .navigationTitle("🔗 Prisionero de la Ciudad Pérdida")
             }
             
             

@@ -131,7 +131,7 @@ struct CaidaView: View {
                             
                             
                             
-                            .navigationTitle("⚠️ Tenochtitlan se cae")
+                            .navigationTitle("🤒 La primera pandemia")
                         }
                         
                         

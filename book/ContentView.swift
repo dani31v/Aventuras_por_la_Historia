@@ -61,7 +61,7 @@ struct MainView: View {
                     ){
                         
                         NavigationLink(destination: EscogePersonajeView(unlockPersonajeView: $isPersonajeViewUnlocked)){
-                            Text("Escoge tu personaje")
+                            Text("✍️ Escoge tu personaje")
                             
                         }
                         
@@ -109,13 +109,13 @@ struct MainView: View {
                         .foregroundStyle(isEncuentro2ViewUnlocked ? Color.black : Color.gray)
                     ){
                         NavigationLink(destination: EncuentroView(unlockEncuentro2: $isEncuentro2ViewUnlocked), tag: "Encuentro", selection: $viewRouter.selectedView) {
-                            Text("")
+                            Text("🔗 Prisionero de la Ciudad Pérdida")
                         }
                         .disabled(!isEncuentroViewUnlocked)
                         .buttonStyle(PlainButtonStyle())
                         
                         NavigationLink(destination: Encuentro2View(unlockSadNightView: $isSadNightViewUnlocked), tag: "Encuentro2", selection: $viewRouter.selectedView) {
-                            Text("⚔️ Un Encuentro Inesperado")
+                            Text("🪖 Nuevo Líder")
                         }
                         .disabled(!isEncuentro2ViewUnlocked)
                         .buttonStyle(PlainButtonStyle())
@@ -131,7 +131,7 @@ struct MainView: View {
                         .buttonStyle(PlainButtonStyle())
                         
                         NavigationLink(destination: SadNight2(unlocksadnight3: $isSadNight3ViewUnlocked), tag: "SadNight2", selection: $viewRouter.selectedView) {
-                            Text("🔥 La revelión")
+                            Text("🔥 La rebelión")
                         }
                         .disabled(!isSadNight2ViewUnlocked)
                         .buttonStyle(PlainButtonStyle())
@@ -154,20 +154,20 @@ struct MainView: View {
                         .foregroundStyle(isCaidaViewUnlocked ? Color.black : Color.gray)
                     ){
                         NavigationLink(destination: CaidaView(unlockcaida2: $isCaida2ViewUnlocked), tag: "Caida", selection: $viewRouter.selectedView) {
-                            Text("⚠️ Tenochtitlan se cae")
+                            Text("🤒 La primera pandemia")
                         }
                         .disabled(!isCaidaViewUnlocked)
                         .buttonStyle(PlainButtonStyle())
                         
                         
                         NavigationLink(destination: CaidaView2(unlockcaida3: $isCaida3ViewUnlocked), tag: "Caida2", selection: $viewRouter.selectedView) {
-                            Text("🤒 La primera pandemia")
+                            Text("🍽️ Platos Vacíos")
                         }
                         .disabled(!isCaida2ViewUnlocked)
                         .buttonStyle(PlainButtonStyle())
                         
                         NavigationLink(destination: CaidaView3(unlockcaida4: $isCaida4ViewUnlocked), tag: "Caida3", selection: $viewRouter.selectedView) {
-                            Text("🍽️ Platos Vacíos")
+                            Text("🛕 La invasión a la ciudad")
                         }
                         .disabled(!isCaida3ViewUnlocked)
                         .buttonStyle(PlainButtonStyle())

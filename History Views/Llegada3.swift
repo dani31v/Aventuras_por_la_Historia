@@ -162,7 +162,7 @@ struct Llegada3View: View {
             
             
             
-            .navigationTitle("⛵️ Llegó Hernán Cortés")
+            .navigationTitle("🛡️ Batalla Centla")
         }
         
         

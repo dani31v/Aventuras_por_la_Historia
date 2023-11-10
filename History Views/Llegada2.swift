@@ -137,7 +137,7 @@ struct Llegada2View: View {
             
             
             
-            .navigationTitle("⛵️ Llegó Hernán Cortés")
+            .navigationTitle("🤝 Amigos y aliados")
         }
         
         

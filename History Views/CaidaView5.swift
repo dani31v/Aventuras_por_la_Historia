@@ -63,7 +63,7 @@ struct CaidaView5: View {
                                                 ZStack{
                                                     HStack(spacing:10){
                                                         ZStack{
-                                                            Image("Moc")
+                                                            Image("tristexico")
                                                                 .resizable()
                                                                 .scaledToFill()
                                                                 .frame(width: 310, height: 410)
@@ -87,7 +87,7 @@ struct CaidaView5: View {
                                                             }
                                                             VStack{
                                                                 
-                                                                    Image("Cuau")
+                                                                    Image("tristec")
                                                                         .resizable()
                                                                         .scaledToFill()
                                                                         .frame(width: 310, height: 410)
@@ -127,7 +127,7 @@ struct CaidaView5: View {
                                             
                                             
                                         }
-                                            
+                                           
                                             
                                             
                                         }
@@ -136,7 +136,7 @@ struct CaidaView5: View {
                                         
                                         
                                         
-                                        .navigationTitle("⚠️ Tenochtitlan se cae")
+                                        .navigationTitle("✨ El final de la hisotria")
                                     }
                                     
                                     

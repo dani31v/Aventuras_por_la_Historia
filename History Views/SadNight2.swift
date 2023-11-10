@@ -157,7 +157,7 @@ struct SadNight2: View {
                 
                 
                 
-                .navigationTitle("🌙 La noche triste")
+                .navigationTitle("🔥 La rebelión")
             }
             
             

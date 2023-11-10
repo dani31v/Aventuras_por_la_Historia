@@ -60,7 +60,7 @@ struct LlegadaHernanView: View {
                 
                 
             }
-            .navigationTitle("⛵️ Llegó Hernán Cortés")
+            .navigationTitle("⛵️ Un Largo Viaje")
         }
         
         

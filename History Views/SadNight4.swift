@@ -126,7 +126,7 @@ struct SadNight4: View {
                         
                         
                         
-                        .navigationTitle("🌙 La noche triste")
+                        .navigationTitle("🕊️ La despedida de Moctezuma")
                     }
                     
                     

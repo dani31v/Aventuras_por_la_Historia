@@ -130,7 +130,7 @@ struct CaidaView4: View {
                                     
                                     
                                     
-                                    .navigationTitle("⚠️ Tenochtitlan se cae")
+                                    .navigationTitle("🛕 La invasión a la ciudad")
                                 }
                                 
                                 
