@@ -45,12 +45,12 @@ struct SadNight4: View {
                             
                             ZStack{
                                 RoundedRectangle(cornerRadius: 40)
-                                    .frame(width:300, height:350)
+                                    .frame(width:300, height:225)
                                     .foregroundStyle(Color.listBG)
                                 
                                 VStack{
                                     Text("Fue una época muy difícil ya que la gente luchaba por ser libres, muchas vidas se perdieron, una de esas la mía.")
-                                        .font(.system(size:25))
+                                        .font(.system(size:23))
                                         .padding()
                                         .foregroundStyle(Color.white)
                                     
@@ -109,13 +109,13 @@ struct SadNight4: View {
                     
                     
                 }
-          
+                ZStack{
                     Button(action: {
                         unlockcaida = true
                         viewRouter.selectedView = "Caida"
                     }) {
                         Text("Siguiente")
-                            font(.system(size:27))
+                            .font(.system(size:27))
                             .bold()
                             .padding(.vertical, 20)
                             .frame(width:200)
@@ -127,20 +127,20 @@ struct SadNight4: View {
                         
                         
                     }
-                    
-              
-                
-                
+                    .offset(x:0, y:-10)
+                }
                 
             }
-            
-            
-            .navigationTitle("🕊️ La despedida de Moctezuma")
-            
+                
+                
+                
+                
+                .navigationTitle("🕊️ La despedida de Moctezuma")
             
         }
     }
 }
+
 
 
 

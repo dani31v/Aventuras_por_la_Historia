@@ -201,7 +201,7 @@ struct MainView: View {
                             .background(Color("List BG"))
                             .scrollContentBackground(.hidden)
                             
-                            .navigationTitle("Nueva Aventura")
+                            .navigationTitle("La Conquista")
                             
                         }
                     }
@@ -245,9 +245,8 @@ struct MainView: View {
                             
                             ContentWorldView()
                             
-                        case "llegadasi":
+                        
                             
-                            LlegadaSiView()
                             
                         default:
                             Text("Vista no encontrada")

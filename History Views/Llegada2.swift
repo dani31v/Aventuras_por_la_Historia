@@ -43,6 +43,7 @@ struct Llegada2View: View {
                             
                             ZStack{
                                 RoundedRectangle(cornerRadius: 40)
+                                    .frame(width:400, height:215)
                                     .foregroundStyle(Color.listBG)
                                 
                                 VStack{

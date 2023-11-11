@@ -17,7 +17,7 @@ struct SadNight3: View {
         ZStack{
             (colorScheme == .dark ? Color("ColorFondo") : Color("ColorFondo"))
                 .edgesIgnoringSafeArea(.all)
-    
+            
             VStack{
                 HStack(spacing:10){
                     
@@ -50,7 +50,7 @@ struct SadNight3: View {
                                 
                                 
                                 VStack{
-                                    Text("Hernán Cortés regresó y sitiaron la ciudad de tenochtitlan.")
+                                    Text("Hernán Cortés regresó y sitiaron la ciudad de Tenochtitlan.")
                                         .font(.system(size:25))
                                         .padding()
                                         .foregroundStyle(Color.white)
@@ -145,16 +145,12 @@ struct SadNight3: View {
                     
                     .offset(x:0, y:-10)
                 }
+                .navigationTitle("🛖 El robo de Tenochtitlan")
             }
             
             
             
-            
-            
-            .navigationTitle("🛖 El robo de Tenochtitlan")
         }
-        
-        
     }
     
     
