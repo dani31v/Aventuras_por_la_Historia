@@ -109,13 +109,13 @@ struct SadNight4: View {
                     
                     
                 }
-                ZStack{
+          
                     Button(action: {
                         unlockcaida = true
                         viewRouter.selectedView = "Caida"
                     }) {
                         Text("Siguiente")
-                        font(.system(size:27))
+                            font(.system(size:27))
                             .bold()
                             .padding(.vertical, 20)
                             .frame(width:200)
@@ -127,8 +127,8 @@ struct SadNight4: View {
                         
                         
                     }
-                    .offset(x:0, y:-10)
-                }
+                    
+              
                 
                 
                 

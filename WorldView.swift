@@ -46,10 +46,11 @@ struct WorldView: UIViewRepresentable {
             
             if let result = hitResults.first {
                 switch result.node.name{
-                case "box":
+                case "conquista":
                     print("Box tocado")
                     DispatchQueue.main.async { // Asegúrate de modificar el estado en el hilo principal
                         self.viewRouter.selectedView = "FirstView"
+                        self.viewRouter.showhistory = true
                     }
                 
                 default:
