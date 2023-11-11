@@ -10,4 +10,5 @@ import SwiftUI
 class ViewRouter: ObservableObject {
     @Published var selectedView: String? = "WorldView"
     @Published var selectedViewDecision: String? = "WorldView"
+    @Published var showAler: Bool = false
 }

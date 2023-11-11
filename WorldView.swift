@@ -45,6 +45,20 @@ struct WorldView: UIViewRepresentable {
             let hitResults = scnView.hitTest(location, options: [:])
             
             if let result = hitResults.first {
+                switch result.node.name{
+                case "box":
+                    print("Box tocado")
+                    DispatchQueue.main.async { // Asegúrate de modificar el estado en el hilo principal
+                        self.viewRouter.selectedView = "FirstView"
+                    }
+                
+                default:
+                    DispatchQueue.main.async { // Asegúrate de modificar el estado en el hilo principal
+                        self.viewRouter.showAler = true
+                    }
+                    
+                }
+                /*
                 if result.node.name == "box" {
                     // El usuario tocó el nodo de prueba, realiza alguna acción aquí
                     print("Box tocado")
@@ -58,6 +72,7 @@ struct WorldView: UIViewRepresentable {
                     let newPosition = SCNVector3(nodePosition.x, nodePosition.y, cameraNode.position.z - Float(parent.zoomFactor))
                     animateCamera(to: newPosition, in: scnView, lookAt: nodePosition)
                 }
+                 */
             }
         }
         
@@ -84,6 +99,9 @@ struct ContentWorldView: View {
             WorldView(scene: $scene)
                 .edgesIgnoringSafeArea(.all)
                 .environmentObject(viewRouter)
+                .alert("⚠️ \n\nSeguimos trabajando en esta historia\n\nIntenta más tarde", isPresented: $viewRouter.showAler) {
+                            Button("Continuar", role: .cancel) { }
+                        }
         }
     }
 }
