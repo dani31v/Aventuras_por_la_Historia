@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct SadNight2: View {
-   
-        @EnvironmentObject var viewRouter: ViewRouter
-        @Binding var unlocksadnight3: Bool
-        @State private var poppover = false
-        var body: some View {
+    
+    @EnvironmentObject var viewRouter: ViewRouter
+    @Binding var unlocksadnight3: Bool
+    @State private var poppover = false
+    @Environment(\.colorScheme) var colorScheme
+    var body: some View {
+        ZStack{
+            (colorScheme == .dark ? Color("ColorFondo") : Color("ColorFondo"))
+                .edgesIgnoringSafeArea(.all)
             
             VStack{
                 HStack(spacing:10){
@@ -41,36 +45,34 @@ struct SadNight2: View {
                             
                             ZStack{
                                 RoundedRectangle(cornerRadius: 40)
-                                    .foregroundStyle(Color.colorMOC)
+                                    .foregroundStyle(Color.listBG)
                                 
                                 VStack{
                                     Text("Quieres revelarte contra los españoles? ")
-                                        .font(.headline)
+                                        .font(.system(size:25))
                                         .padding()
                                         .foregroundStyle(Color.white)
-                              
                                     
-                                    
-                                    
+                                
                                 }
                             }
-                                .padding()
-                                
-                                .frame(width: 300, height: 270)
-                                
-                                .transition(.slide)
-                                .offset(x:200,y:-190)
-            
-                                
+                            .padding()
+                            
+                            .frame(width: 300, height: 270)
+                            
+                            .transition(.slide)
+                            .offset(x:200,y:-190)
+                            
+                            
                             
                             .frame(width:300, height: 480)
                             Spacer()
                             
                         }
                         HStack{
-
-                            ZStack{
                             
+                            ZStack{
+                                
                                 HStack(spacing:10){
                                     ZStack{
                                         Image("Moc")
@@ -86,16 +88,20 @@ struct SadNight2: View {
                                                 viewRouter.selectedView = "SadNight3"
                                             }) {
                                                 Text("No")
-                                                    .padding()
-                                                    .background(Color.colorMOC)
+                                                    .font(.system(size:30))
+                                                    .bold()
+                                                    .padding(.vertical, 20)
+                                                    .frame(width:100)
+                                                    .background(
+                                                        LinearGradient(gradient: Gradient(colors: [Color.coloBut1, Color.colorBut2]), startPoint: .leading, endPoint: .trailing))
                                                     .foregroundColor(.white)
-                                                    .cornerRadius(15)
-   
+                                                    .cornerRadius(300)
+                                                
                                             }
                                             .offset(x:80, y:25)
                                         }
-                                
-                                    
+                                        
+                                        
                                         VStack{
                                             Image("PedroA")
                                                 .resizable()
@@ -111,15 +117,19 @@ struct SadNight2: View {
                                                     viewRouter.selectedView = "SadNight3"
                                                 }) {
                                                     Text("Si")
-                                                        .padding()
-                                                        .background(Color.colorMOC)
+                                                        .font(.system(size:30))
+                                                        .bold()
+                                                        .padding(.vertical, 20)
+                                                        .frame(width:100)
+                                                        .background(
+                                                            LinearGradient(gradient: Gradient(colors: [Color.coloBut1, Color.colorBut2]), startPoint: .leading, endPoint: .trailing))
                                                         .foregroundColor(.white)
-                                                        .cornerRadius(15)
-       
+                                                        .cornerRadius(300)
+                                                    
                                                 }
                                                 .offset(x:-40, y:25)
                                             }
-                                        
+                                            
                                             
                                         }
                                     }
@@ -128,14 +138,14 @@ struct SadNight2: View {
                                     
                                 }
                             }
-                                .padding()
-                                
-                                .frame(width: 400, height: 250)
-                                
-                                .transition(.slide)
-                                .offset(x:500,y:0)
-            
-                                
+                            .padding()
+                            
+                            .frame(width: 400, height: 250)
+                            
+                            .transition(.slide)
+                            .offset(x:500,y:0)
+                            
+                            
                             
                             .frame(width:300, height: 480)
                             Spacer()
@@ -143,25 +153,26 @@ struct SadNight2: View {
                         }
                         
                     }
-                  
-                       
-                        
-                    }
-        
                     
                     
                     
                 }
-               
                 
                 
                 
                 
-                .navigationTitle("🔥 La rebelión")
             }
             
             
+            
+            
+            
+            .navigationTitle("🔥 La rebelión")
         }
+        
+        
+    }
+}
         
 
 

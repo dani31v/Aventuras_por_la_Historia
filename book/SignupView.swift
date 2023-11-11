@@ -9,11 +9,9 @@ struct GameCenterView: View {
     var body: some View {
         
         ZStack {
-            Image("fondo") // Reemplaza "Fondo" con el nombre de tu imagen
-                .resizable()
-                .opacity(0.1)
+            Image("FONDOINICIAL")
+                .opacity(0.5)
                 .edgesIgnoringSafeArea(.all)
-                .scaledToFill()
             
             
                 HStack{
@@ -22,7 +20,7 @@ struct GameCenterView: View {
                         Text ("¡Bienvenidos!")
                             .font(.system(size: 42))
                             .bold()
-                            .foregroundColor(.colorMOC)
+                            .foregroundColor(.white)
                             .frame(width:260, height:50, alignment:.top)
                         
                         Spacer()
@@ -40,23 +38,28 @@ struct GameCenterView: View {
                         Spacer(minLength: 0)
                     }
                     VStack{
-                        Spacer(minLength: 0)
-                        Button("Show Game Center") {
-                            authViewModel.authenticate()
+                        ZStack{
+                            Spacer(minLength: 0)
+                            Button("Show Game Center") {
+                                authViewModel.authenticate()
+                            }
+                            
+                            .font(.system(size:20))
+                            .bold()
+                            .padding()
+                            .frame(width:300)
+                            .background(
+                                LinearGradient(gradient: Gradient(colors: [Color.coloBut1, Color.colorBut2]), startPoint: .leading, endPoint: .trailing))
+                            .foregroundColor(.white)
+                            .cornerRadius(300)
+                          
+                            
+                            
                         }
-                        
-                        .padding()
-                        .background(Color.colorMOC)
-                        .foregroundColor(.white)
-                        .cornerRadius(15)
-                        .frame(width: 260, height: 50)
-                        Spacer()
-                            .frame(height:50)
-                        
+                        .offset(x:55, y:300)
+                    }
                         
                     }
-                    
-                }
             
             
         }

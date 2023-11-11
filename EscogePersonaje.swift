@@ -9,20 +9,26 @@ import SwiftUI
 
 struct EscogePersonajeView: View {
     @EnvironmentObject var viewRouter: ViewRouter
+    @Environment(\.colorScheme) var colorScheme
     @Binding var unlockPersonajeView: Bool
     var body: some View {
-        ScrollView(.vertical,showsIndicators:false){
-            VStack{
-                Spacer()
-                Text("PERSONAJES")
-                    .bold()
-                    .font(.system(size: 40))
-                    .foregroundColor(.accentColor)
+        
+        ZStack{
+            (colorScheme == .dark ? Color("ColorFondo") : Color("ColorFondo"))
+                .edgesIgnoringSafeArea(.all)
+            
+            ScrollView(.vertical,showsIndicators:false){
+                VStack{
+                    Spacer()
+                    Text("PERSONAJES")
+                        .bold()
+                        .font(.system(size: 40))
+                        .foregroundColor(.white)
+                    
+                }
                 
-            }
-            
-            
-                ScrollView(.horizontal, showsIndicators: false){
+                
+                ScrollView(){
                     
                     HStack(spacing: 10) {
                         VStack{
@@ -34,12 +40,14 @@ struct EscogePersonajeView: View {
                                 
                             }) {
                                 Text("Hernán Cortés")
+                                    .font(.system(size:20))
                                     .padding()
+                                    .frame(width:200)
                                     .background(Color.gray)
                                     .foregroundColor(.white)
-                                    .cornerRadius(15)
+                                    .cornerRadius(300)
                             }
-                            .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                            .disabled(true)
                             .opacity(0.5)
                             
                             Image("Malinche")
@@ -50,12 +58,14 @@ struct EscogePersonajeView: View {
                                 
                             }) {
                                 Text("Malinche")
+                                    .font(.system(size:20))
                                     .padding()
+                                    .frame(width:200)
                                     .background(Color.gray)
                                     .foregroundColor(.white)
-                                    .cornerRadius(15)
+                                    .cornerRadius(300)
                             }
-                            .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                            .disabled(true)
                             .opacity(0.5)
                         }
                         
@@ -65,18 +75,21 @@ struct EscogePersonajeView: View {
                                 .frame(width: 300, height: 300)
                             
                             Button(action: {
-                                        unlockPersonajeView = true
-                                        viewRouter.selectedView = "PersonajeView"
-                                    }) {
-                                        Text("Moctezuma")
-                                            .padding()
-                                            .background(Color.colorMOC)
-                                            .foregroundColor(.white)
-                                            .cornerRadius(15)
-
-                                    }
+                                unlockPersonajeView = true
+                                viewRouter.selectedView = "PersonajeView"
+                            }) {
+                                Text("Moctezuma")
+                                    .font(.system(size:20))
+                                    .padding()
+                                    .frame(width:200)
+                                    .background(
+                                        LinearGradient(gradient: Gradient(colors: [Color.coloBut1, Color.colorBut2]), startPoint: .leading, endPoint: .trailing))
+                                    .foregroundColor(.white)
+                                    .cornerRadius(300)
+                                
+                            }
                             
-                          
+                            
                             Image("PedroA")
                                 .resizable()
                                 .frame(width: 300, height: 300)
@@ -85,11 +98,13 @@ struct EscogePersonajeView: View {
                                 
                             }) {
                                 Text("Pedro Alvarado")
+                                    .font(.system(size:20))
                                     .padding()
+                                    .frame(width:200)
                                     .background(Color.gray)
                                     .foregroundColor(.white)
-                                    .cornerRadius(15)
-
+                                    .cornerRadius(300)
+                                
                             }
                             .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                             .opacity(0.5)
@@ -104,10 +119,12 @@ struct EscogePersonajeView: View {
                                 // Acción para el botón de Xicoténcatl
                             }) {
                                 Text("Xicoténcatl")
+                                    .font(.system(size:20))
                                     .padding()
+                                    .frame(width:200)
                                     .background(Color.gray)
                                     .foregroundColor(.white)
-                                    .cornerRadius(15)
+                                    .cornerRadius(300)
                             }
                             .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                             .opacity(0.5)
@@ -120,10 +137,12 @@ struct EscogePersonajeView: View {
                                 
                             }) {
                                 Text("Cuitlahuac")
+                                    .font(.system(size:20))
                                     .padding()
+                                    .frame(width:200)
                                     .background(Color.gray)
                                     .foregroundColor(.white)
-                                    .cornerRadius(15)
+                                    .cornerRadius(300)
                             }
                             .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                             .opacity(0.5)
@@ -135,6 +154,8 @@ struct EscogePersonajeView: View {
                 
             }
             .navigationTitle("Escoge a tu personaje")
+            
+            
         }
-        
     }
+}

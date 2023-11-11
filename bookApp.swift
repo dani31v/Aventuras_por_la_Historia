@@ -1,6 +1,7 @@
 import SwiftUI
 
 @main
+
 struct myStoryApp: App {
     @StateObject var viewRouter = ViewRouter()
     @StateObject var authViewModel = AuthViewModel()
