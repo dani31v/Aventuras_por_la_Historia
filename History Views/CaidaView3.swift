@@ -18,6 +18,11 @@ struct CaidaView3: View {
         ZStack{
             (colorScheme == .dark ? Color("ColorFondo") : Color("ColorFondo"))
                 .edgesIgnoringSafeArea(.all)
+            VStack{
+                Spacer()
+                LottieView(url: Bundle.main.url(forResource: "Comp_6", withExtension: "lottie")!)
+                    .edgesIgnoringSafeArea(.all)
+            }
             
             VStack{
                 HStack(spacing:10){
@@ -28,13 +33,12 @@ struct CaidaView3: View {
                             
                             Button(action:{poppover.toggle()}){
                                 
-                                Image("Fantasma")
+                                Image("fantasmatriste")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 450, height: 550)
                                     .clipped()
-                                Spacer()
-                                    .frame(height:10)
+                                    .offset(x:-300, y: 160)
                                 
                             }
                         }
@@ -60,7 +64,7 @@ struct CaidaView3: View {
                             .frame(width: 300, height: 270)
                             
                             .transition(.slide)
-                            .offset(x:200,y:-190)
+                            .offset(x:50,y:-90)
                             .frame(width:300, height: 480)
                             Spacer()
                             
@@ -69,19 +73,20 @@ struct CaidaView3: View {
                             ZStack{
                                 HStack(spacing:10){
                                     ZStack{
+                                      
                                         Image("PedroA")
                                             .resizable()
                                             .scaledToFill()
-                                            .frame(width: 310, height: 410)
+                                            .frame(width: 300, height: 400)
                                             .clipped()
-                                            .offset(x:80, y:25)
+                                            .offset(x:80, y:15)
                                         VStack{
                                             Image("Hernan")
                                                 .resizable()
                                                 .scaledToFill()
-                                                .frame(width: 310, height: 410)
+                                                .frame(width: 300, height: 400)
                                                 .clipped()
-                                                .offset(x:-100, y:25)
+                                                .offset(x:-100, y:15)
                                             
                                         }
                                         
@@ -94,7 +99,7 @@ struct CaidaView3: View {
                             .frame(width: 400, height: 250)
                             
                             .transition(.slide)
-                            .offset(x:500,y:0)
+                            .offset(x:500,y:190)
                             .frame(width:300, height: 480)
                             Spacer()
                             

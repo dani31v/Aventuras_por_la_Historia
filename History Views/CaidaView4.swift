@@ -26,7 +26,7 @@ struct CaidaView4: View {
                             
                             Button(action:{poppover.toggle()}){
                                 
-                                Image("Fantasma")
+                                Image("fantasmatriste")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 450, height: 550)

@@ -40,13 +40,12 @@ struct SadNight2: View {
                                 
                                 Button(action:{poppover.toggle()}){
                                     
-                                    Image("Moc")
+                                    Image("mocserio")
                                         .resizable()
                                         .scaledToFill()
                                         .frame(width: 400, height: 500)
                                         .clipped()
-                                    Spacer()
-                                        .frame(height:10)
+                                        .offset(x:-250, y: -80)
                                     
                                 }
                             }
@@ -86,7 +85,7 @@ struct SadNight2: View {
                                     
                                     HStack(spacing:10){
                                         ZStack{
-                                            Image("Moc")
+                                            Image("tristemoc")
                                                 .resizable()
                                                 .scaledToFill()
                                                 .frame(width: 310, height: 410)
@@ -208,7 +207,7 @@ struct SadNightSi: View{
                             
                             Button(action:{poppover.toggle()}){
                                 
-                                Image("Moc")
+                                Image("tristemoc")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 400, height: 500)
@@ -230,7 +229,7 @@ struct SadNightSi: View{
                                     .frame(width:360, height:250)
                                 
                                 VStack{
-                                    Text("Los españoles tuvieron que huir de tenochtitlan ya queluchamos contra ellos y muchos de ellos murieron.")
+                                    Text("Los españoles tuvieron que huir de tenochtitlan ya que luchamos contra ellos y muchos de ellos murieron.")
                                         .font(.system(size: 25))
                                         .padding()
                                         .foregroundStyle(Color.white)
@@ -245,7 +244,7 @@ struct SadNightSi: View{
                             .frame(width: 400, height: 250)
                             
                             .transition(.slide)
-                            .offset(x:200,y:-200)
+                            .offset(x:200,y:-190)
                             
                             
                             
@@ -271,7 +270,7 @@ struct SadNightSi: View{
                                         
                                         
                                         VStack{
-                                            Image("Malinche")
+                                            Image("trsitemalinche")
                                                 .resizable()
                                                 .scaledToFill()
                                                 .frame(width: 300, height: 400)
@@ -330,7 +329,7 @@ struct SadNightSi: View{
                 
                 
                 
-                .navigationTitle("🌙 La noche triste")
+                .navigationTitle("🔥 La rebelión")
             }
             
             
@@ -400,7 +399,7 @@ struct SadNightNo: View {
                             .frame(width: 400, height: 250)
                             
                             .transition(.slide)
-                            .offset(x:200,y:-200)
+                            .offset(x:200,y:-187)
                             
                             
                             
@@ -425,6 +424,15 @@ struct SadNightNo: View {
                                                 .frame(width: 300, height: 400)
                                                 .clipped()
                                                 .offset(x:-40, y:25)
+                                            
+                                        }
+                                        VStack{
+                                            Image("tristec")
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(width: 400, height: 500)
+                                                .clipped()
+                                                .offset(x:60, y:25)
                                             
                                         }
                                     }
@@ -477,7 +485,7 @@ struct SadNightNo: View {
                 
                 
                 
-                .navigationTitle("⛵️ Llegó Hernán Cortés")
+                .navigationTitle("🔥 La rebelión")
             }
             
             

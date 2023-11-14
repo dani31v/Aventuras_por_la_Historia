@@ -12,22 +12,28 @@ struct EncuentroView: View {
             (colorScheme == .dark ? Color("ColorFondo") : Color("ColorFondo"))
                 .edgesIgnoringSafeArea(.all)
             
+            
+            VStack{
+                Spacer()
+                LottieView(url: Bundle.main.url(forResource: "Piramide_Sol", withExtension: "lottie")!)
+                    .ignoresSafeArea()
+            }
+                
             VStack{
                 HStack(spacing:10){
                     
                     ZStack{
                         VStack{
                             Spacer()
-                            
+                                .frame(height:200)
                             Button(action:{poppover.toggle()}){
-                                
-                                Image("Moc")
+                               
+                                Image("tristemoc")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 400, height: 500)
                                     .clipped()
-                                Spacer()
-                                    .frame(height:10)
+                                    .offset(x:-300, y: 85)
                                 
                             }
                         }
@@ -37,6 +43,7 @@ struct EncuentroView: View {
                             
                             ZStack{
                                 Spacer()
+                                   
                                 RoundedRectangle(cornerRadius: 40)
                                     .frame(width:300, height:200)
                                     .foregroundStyle(Color.listBG)
@@ -57,7 +64,7 @@ struct EncuentroView: View {
                             .frame(width: 300, height: 270)
                             
                             .transition(.slide)
-                            .offset(x:200,y:-190)
+                            .offset(x:200,y:-100)
                             
                             
                             
@@ -69,39 +76,10 @@ struct EncuentroView: View {
                             
                             ZStack{
                                 
-                                HStack(spacing:10){
-                                    ZStack{
-            
-                                        Image("Moc")
-                                            .resizable()
-                                            .scaledToFill()
-                                            .frame(width: 300, height: 400)
-                                            .clipped()
-                                            .offset(x:80, y:25)
-                                        
-                                        Image("prision")
-                                            .resizable()
-                                            .scaledToFill()
-                                            .frame(width: 300, height: 400)
-                                            .clipped()
-                                            .offset(x:80, y:25)
-                                        
-                                        
-                                        VStack{
-                                            Image("Hernan")
-                                                .resizable()
-                                                .scaledToFill()
-                                                .frame(width: 290, height: 370)
-                                                .clipped()
-                                                .offset(x:-40, y:25)
-                                            
-                                            
-                                        }
-                                    }
+                            
                                     
                                     
-                                    
-                                }
+                                
                             }
                             .padding()
                             
@@ -123,6 +101,7 @@ struct EncuentroView: View {
                     
                 }
                 ZStack{
+                    
                     Button(action: {
                         unlockEncuentro2 = true
                         viewRouter.selectedView = "Encuentro2"
@@ -140,7 +119,7 @@ struct EncuentroView: View {
                         
                         
                     }
-                    .offset(x:0, y:-10)
+                    .offset(x:0, y:-30)
                 }
             
             }

@@ -27,6 +27,11 @@
 		0A9BC8D72AFA04D200C5903E /* FolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BC8D62AFA04D200C5903E /* FolderView.swift */; };
 		0A9BC8D92AFA091900C5903E /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BC8D82AFA091900C5903E /* NoteView.swift */; };
 		0AA2637D2AFAB5BE009A6F00 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA2637C2AFAB5BE009A6F00 /* SignupView.swift */; };
+		0AABFB592B029FD3008C2892 /* lottieview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABFB582B029FD3008C2892 /* lottieview.swift */; };
+		0AABFB5C2B02B1C4008C2892 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0AABFB5B2B02B1C4008C2892 /* Lottie */; };
+		0AABFB652B02B9CD008C2892 /* Piramide_Sol.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 0AABFB642B02B9CD008C2892 /* Piramide_Sol.lottie */; };
+		0AABFB672B02BE0C008C2892 /* bote.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 0AABFB662B02BE0C008C2892 /* bote.lottie */; };
+		0AABFB692B0375EF008C2892 /* Comp_6.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 0AABFB682B0375EF008C2892 /* Comp_6.lottie */; };
 		0AC60C542AFADCA700F68C9D /* LlegadaHernan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC60C532AFADCA700F68C9D /* LlegadaHernan.swift */; };
 		0AE4E87F2AFB1231002BC7BD /* PersonajeEscogido.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE4E87E2AFB1231002BC7BD /* PersonajeEscogido.swift */; };
 		0AFF3C892AFB052000235888 /* EscogePersonaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFF3C882AFB052000235888 /* EscogePersonaje.swift */; };
@@ -49,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		0A2AF73D2AFBE88B007357D9 /* Llegada2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Llegada2.swift; sourceTree = "<group>"; };
-		0A6342B42AF9C63B0098F315 /* book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = book.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6342B42AF9C63B0098F315 /* Aventuras x la historia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aventuras x la historia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6342B72AF9C63B0098F315 /* bookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookApp.swift; sourceTree = "<group>"; };
 		0A6342B92AF9C63B0098F315 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0A6342BB2AF9C63E0098F315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +76,10 @@
 		0A9BC8D82AFA091900C5903E /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		0AA2637C2AFAB5BE009A6F00 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		0AA2637E2AFAB69E009A6F00 /* book.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = book.entitlements; sourceTree = "<group>"; };
+		0AABFB582B029FD3008C2892 /* lottieview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lottieview.swift; sourceTree = "<group>"; };
+		0AABFB642B02B9CD008C2892 /* Piramide_Sol.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; name = Piramide_Sol.lottie; path = ../../../../../Downloads/Piramide_Sol.lottie; sourceTree = "<group>"; };
+		0AABFB662B02BE0C008C2892 /* bote.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; name = bote.lottie; path = ../../../../../Downloads/bote.lottie; sourceTree = "<group>"; };
+		0AABFB682B0375EF008C2892 /* Comp_6.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; name = Comp_6.lottie; path = ../../../../../Desktop/Comp_6.lottie; sourceTree = "<group>"; };
 		0AC60C532AFADCA700F68C9D /* LlegadaHernan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlegadaHernan.swift; sourceTree = "<group>"; };
 		0AE4E87E2AFB1231002BC7BD /* PersonajeEscogido.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonajeEscogido.swift; sourceTree = "<group>"; };
 		0AFF3C882AFB052000235888 /* EscogePersonaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscogePersonaje.swift; sourceTree = "<group>"; };
@@ -96,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AABFB5C2B02B1C4008C2892 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +139,7 @@
 		0A6342B52AF9C63B0098F315 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A6342B42AF9C63B0098F315 /* book.app */,
+				0A6342B42AF9C63B0098F315 /* Aventuras x la historia.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +166,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		0AABFB5D2B02B356008C2892 /* Animaciones */ = {
+			isa = PBXGroup;
+			children = (
+				0AABFB642B02B9CD008C2892 /* Piramide_Sol.lottie */,
+				0AABFB662B02BE0C008C2892 /* bote.lottie */,
+				0AABFB682B0375EF008C2892 /* Comp_6.lottie */,
+			);
+			path = Animaciones;
+			sourceTree = "<group>";
+		};
 		16FDAFC42AFB677800B9DE36 /* History Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +183,8 @@
 				0A2AF73D2AFBE88B007357D9 /* Llegada2.swift */,
 				0A7254A62AFC83FA000C40A9 /* Llegada4.swift */,
 				0A7254A42AFC7D4B000C40A9 /* Llegada3.swift */,
+				0AABFB5D2B02B356008C2892 /* Animaciones */,
+				0AABFB582B029FD3008C2892 /* lottieview.swift */,
 				16FDAFC62AFB679300B9DE36 /* EncuentroView.swift */,
 				0A817AC22AFC8AAF001E2220 /* Encuentro2View.swift */,
 				16FDAFC82AFB679C00B9DE36 /* SadNightView.swift */,
@@ -232,9 +254,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0A6342B32AF9C63B0098F315 /* book */ = {
+		0A6342B32AF9C63B0098F315 /* Aventuras x la historia */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A6342C22AF9C63E0098F315 /* Build configuration list for PBXNativeTarget "book" */;
+			buildConfigurationList = 0A6342C22AF9C63E0098F315 /* Build configuration list for PBXNativeTarget "Aventuras x la historia" */;
 			buildPhases = (
 				0A6342B02AF9C63B0098F315 /* Sources */,
 				0A6342B12AF9C63B0098F315 /* Frameworks */,
@@ -244,9 +266,12 @@
 			);
 			dependencies = (
 			);
-			name = book;
+			name = "Aventuras x la historia";
+			packageProductDependencies = (
+				0AABFB5B2B02B1C4008C2892 /* Lottie */,
+			);
 			productName = book;
-			productReference = 0A6342B42AF9C63B0098F315 /* book.app */;
+			productReference = 0A6342B42AF9C63B0098F315 /* Aventuras x la historia.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -273,11 +298,14 @@
 				Base,
 			);
 			mainGroup = 0A6342AB2AF9C63B0098F315;
+			packageReferences = (
+				0AABFB5A2B02B1C4008C2892 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 0A6342B52AF9C63B0098F315 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0A6342B32AF9C63B0098F315 /* book */,
+				0A6342B32AF9C63B0098F315 /* Aventuras x la historia */,
 			);
 		};
 /* End PBXProject section */
@@ -290,6 +318,9 @@
 				0A6342BF2AF9C63E0098F315 /* Preview Assets.xcassets in Resources */,
 				0A6342BC2AF9C63E0098F315 /* Assets.xcassets in Resources */,
 				16FDAFE82AFC6C2B00B9DE36 /* mundo.scn in Resources */,
+				0AABFB652B02B9CD008C2892 /* Piramide_Sol.lottie in Resources */,
+				0AABFB692B0375EF008C2892 /* Comp_6.lottie in Resources */,
+				0AABFB672B02BE0C008C2892 /* bote.lottie in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +346,7 @@
 				0A6342BA2AF9C63B0098F315 /* ContentView.swift in Sources */,
 				16FDAFDD2AFB7D3F00B9DE36 /* ImageViewModal.swift in Sources */,
 				0AE4E87F2AFB1231002BC7BD /* PersonajeEscogido.swift in Sources */,
+				0AABFB592B029FD3008C2892 /* lottieview.swift in Sources */,
 				16FDAFCF2AFB67C700B9DE36 /* Playground1.swift in Sources */,
 				0A81D3CE2AFCCA8B001EDDF1 /* CaidaView4.swift in Sources */,
 				0A817AC32AFC8AAF001E2220 /* Encuentro2View.swift in Sources */,
@@ -540,7 +572,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0A6342C22AF9C63E0098F315 /* Build configuration list for PBXNativeTarget "book" */ = {
+		0A6342C22AF9C63E0098F315 /* Build configuration list for PBXNativeTarget "Aventuras x la historia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A6342C32AF9C63E0098F315 /* Debug */,
@@ -550,6 +582,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0AABFB5A2B02B1C4008C2892 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0AABFB5B2B02B1C4008C2892 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0AABFB5A2B02B1C4008C2892 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0A6342AC2AF9C63B0098F315 /* Project object */;
 }

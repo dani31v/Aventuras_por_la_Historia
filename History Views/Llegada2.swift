@@ -11,7 +11,7 @@ struct Llegada2View: View {
     @EnvironmentObject var viewRouter: ViewRouter
     @Binding var unlockHernanView3: Bool
     @Environment(\.colorScheme) var colorScheme
-    @State private var poppover = false
+    @State private var isshowingpoppover = false
     var body: some View {
         ZStack{
             (colorScheme == .dark ? Color("ColorFondo") : Color("ColorFondo"))
@@ -23,9 +23,9 @@ struct Llegada2View: View {
                         VStack{
                             Spacer()
                             
-                            Button(action:{poppover.toggle()}){
+                            Button(action:{}){
                                 
-                                Image("Moc")
+                                Image("mocserio")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 400, height: 500)
@@ -62,12 +62,12 @@ struct Llegada2View: View {
                             .frame(width: 400, height: 250)
                             
                             .transition(.slide)
-                            .offset(x:200,y:-200)
+                
                             
-                            
-                            
-                            .frame(width:300, height: 480)
-                            Spacer()
+                            .frame(width:500, height: 500)
+                            .offset(x:-80,y:-150)
+                       
+                           
                             
                         }
                         HStack{
@@ -88,69 +88,79 @@ struct Llegada2View: View {
                                         
                                         
                                         VStack{
-                                            Image("Xico")
-                                                .resizable()
-                                                .scaledToFill()
-                                                .frame(width: 300, height: 400)
-                                                .clipped()
-                                                .offset(x:-40, y:25)
+                                            Button(action:{(isshowingpoppover.toggle())}){
+                                                Image("tristexico")
+                                                    .resizable()
+                                                    .scaledToFill()
+                                                    .frame(width: 300, height: 400)
+                                                    .clipped()
+                                                    .offset(x:-40, y:25)
+                                                
+                                            }
+                                            .popover(isPresented: $isshowingpoppover) {
+                                                
+                                                Text("El es Xico: ")
+                                                    .background(Color.listBG)
+                                                    .padding()
+                                     
+                                            }
                                             
                                         }
                                     }
-                                    
-                                    
-                                    
+                                        
+                                        
+                                    }
                                 }
+                                .padding()
+                                
+                                .frame(width: 400, height: 250)
+                                
+                                .transition(.slide)
+                                .offset(x:500,y:0)
+                                
+                                
+                                
+                                .frame(width:300, height: 480)
+                                Spacer()
+                                
                             }
-                            .padding()
-                            
-                            .frame(width: 400, height: 250)
-                            
-                            .transition(.slide)
-                            .offset(x:500,y:0)
-                            
-                            
-                            
-                            .frame(width:300, height: 480)
-                            Spacer()
                             
                         }
                         
+                        
+                        
+                        
+                    }
+                    ZStack{
+                        Button(action: {
+                            unlockHernanView3 = true
+                            viewRouter.selectedView = "HernanC3"
+                        }) {
+                            Text("Siguiente")
+                                .font(.system(size:27))
+                                .bold()
+                                .padding(.vertical, 20)
+                                .frame(width:200)
+                                .background(
+                                    LinearGradient(gradient: Gradient(colors: [Color.coloBut1, Color.colorBut2]), startPoint: .leading, endPoint: .trailing))                    .foregroundColor(.white)
+                                .cornerRadius(300)
+                            
+                            
+                        }
+                        .offset(x:0, y:-10)
                     }
                     
                     
                     
                     
-                }
-                ZStack{
-                    Button(action: {
-                        unlockHernanView3 = true
-                        viewRouter.selectedView = "HernanC3"
-                    }) {
-                        Text("Siguiente")
-                            .font(.system(size:27))
-                            .bold()
-                            .padding(.vertical, 20)
-                            .frame(width:200)
-                            .background(
-                                LinearGradient(gradient: Gradient(colors: [Color.coloBut1, Color.colorBut2]), startPoint: .leading, endPoint: .trailing))                    .foregroundColor(.white)
-                            .cornerRadius(300)
-                        
-                        
-                    }
-                    .offset(x:0, y:-10)
+                    .navigationTitle("🤝 Amigos y aliados")
                 }
                 
                 
-                
-                
-                .navigationTitle("🤝 Amigos y aliados")
             }
             
             
         }
-     
-        
     }
-}
+    
 

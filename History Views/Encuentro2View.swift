@@ -28,10 +28,10 @@ struct Encuentro2View: View {
                                     
                                     Button(action:{poppover.toggle()}){
                                         
-                                        Image("Moc")
+                                        Image("tristemoc")
                                             .resizable()
                                             .scaledToFill()
-                                            .frame(width: 400, height: 500)
+                                            .frame(width: 430, height: 530)
                                             .clipped()
                                         Spacer()
                                             .frame(height:10)
@@ -63,7 +63,7 @@ struct Encuentro2View: View {
                                         .frame(width: 300, height: 270)
                                         
                                         .transition(.slide)
-                                        .offset(x:200,y:-190)
+                                        .offset(x:200,y:-185)
                     
                                         
                                     
@@ -86,7 +86,7 @@ struct Encuentro2View: View {
                                         
                                             
                                                 VStack{
-                                                    Image("Hernan")
+                                                    Image("hernanenojado")
                                                         .resizable()
                                                         .scaledToFill()
                                                         .frame(width: 290, height: 370)

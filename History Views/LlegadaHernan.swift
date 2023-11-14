@@ -16,16 +16,24 @@ struct LlegadaHernanView: View {
         ZStack{
             (colorScheme == .dark ? Color("ColorFondo") : Color("ColorFondo"))
                 .edgesIgnoringSafeArea(.all)
+            VStack{
+                Spacer()
+                LottieView(url: Bundle.main.url(forResource: "bote", withExtension: "lottie")!)
+                    .ignoresSafeArea(edges:.all)
+            }
+
             
             VStack{
+            
                 HStack{
                     Image("Moc")
                         .resizable()
                         .scaledToFill()
                         .frame(width: 300, height: 500)
                         .clipped()
+                        .offset(x:-100, y: 190)
                     
-                    
+            
                     ZStack{
                         Spacer()
                         RoundedRectangle(cornerRadius: 40)
@@ -41,7 +49,8 @@ struct LlegadaHernanView: View {
                         }
                         .padding()
                     }
-                    .frame(width: 300, height: 250)
+                    .frame(width: 300, height: 280)
+                    .offset(x:-120, y: -120)
                     
                     
                     

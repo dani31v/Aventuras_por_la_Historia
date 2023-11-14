@@ -28,7 +28,7 @@ struct SadNight4: View {
                             
                             Button(action:{poppover.toggle()}){
                                 
-                                Image("Moc")
+                                Image("tristemoc")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 400, height: 500)
@@ -70,7 +70,7 @@ struct SadNight4: View {
                             ZStack{
                                 HStack(spacing:10){
                                     ZStack{
-                                        Image("Fantasma")
+                                        Image("fantasmatriste")
                                             .resizable()
                                             .scaledToFill()
                                             .frame(width: 450, height: 510)

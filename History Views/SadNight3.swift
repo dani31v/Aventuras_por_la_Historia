@@ -11,13 +11,18 @@ struct SadNight3: View {
     @EnvironmentObject var viewRouter: ViewRouter
     @Binding var unlocksadnight4: Bool
     @Environment(\.colorScheme) var colorScheme
+    @State private var imageModal = false
+    @State private var popover = false
+    @State private var drawnImage: UIImage?
     @State private var poppover = false
+    @State private var isDrawingMode = false
+    
     var body: some View {
         
         ZStack{
             (colorScheme == .dark ? Color("ColorFondo") : Color("ColorFondo"))
                 .edgesIgnoringSafeArea(.all)
-            
+         HStack{
             VStack{
                 HStack(spacing:10){
                     
@@ -25,9 +30,10 @@ struct SadNight3: View {
                         VStack{
                             Spacer()
                             
+                            
                             Button(action:{poppover.toggle()}){
                                 
-                                Image("Moc")
+                                Image("mocserio")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 400, height: 500)
@@ -45,12 +51,12 @@ struct SadNight3: View {
                             
                             ZStack{
                                 RoundedRectangle(cornerRadius: 40)
-                                    .frame(width:290, height:200)
+                                    .frame(width:400, height:200)
                                     .foregroundStyle(Color.listBG)
                                 
                                 
                                 VStack{
-                                    Text("Hernán Cortés regresó y sitiaron la ciudad de Tenochtitlan.")
+                                    Text("Hernán Cortés regresó y sitiaron la ciudad de Tenochtitlan.\n¿Y tu como te lo imaginas?. \nAquí te dejamos un espacio para que dejes volar tu imaginación.")
                                         .font(.system(size:25))
                                         .padding()
                                         .foregroundStyle(Color.white)
@@ -62,10 +68,10 @@ struct SadNight3: View {
                             }
                             .padding()
                             
-                            .frame(width: 300, height: 270)
+                            .frame(width: 300, height: 370)
                             
                             .transition(.slide)
-                            .offset(x:200,y:-200)
+                            .offset(x:200,y:-100)
                             
                             
                             
@@ -79,12 +85,7 @@ struct SadNight3: View {
                                 
                                 HStack(spacing:10){
                                     ZStack{
-                                        Image("Hernan")
-                                            .resizable()
-                                            .scaledToFill()
-                                            .frame(width: 310, height: 410)
-                                            .clipped()
-                                            .offset(x:-40, y:25)
+                                        
                                         VStack{
                                             Image("luna")
                                                 .resizable()
@@ -119,44 +120,110 @@ struct SadNight3: View {
                             Spacer()
                             
                         }
+                        .allowsHitTesting(!isDrawingMode)
                         
                     }
                     
-                    
+                }
                     
                 }
+                
                 ZStack{
-                    Button(action: {
-                        unlocksadnight4 = true
-                        viewRouter.selectedView = "SadNight4"
-                    }) {
-                        Text("Siguiente")
-                            .font(.system(size:27))
+                    HStack{
+                        ZStack{
+                            Button(action: {
+                                unlocksadnight4 = true
+                                viewRouter.selectedView = "SadNight4"
+                            }) {
+                                Text("Siguiente")
+                                    .font(.system(size:27))
+                                    .bold()
+                                    .padding(.vertical, 20)
+                                    .frame(width:200)
+                                    .background(
+                                        LinearGradient(gradient: Gradient(colors: [Color.coloBut1, Color.colorBut2]), startPoint: .leading, endPoint: .trailing))
+                                    .foregroundColor(.white)
+                                    .cornerRadius(300)
+                                
+                                    .padding(.bottom, 20)
+                                
+                                
+                            }
+                            .offset(x:-100, y:200)
+                        }
+                        Spacer()
+                        ZStack{
+                            
+                            Button("✏️ Dibuja aquí") {
+                                popover = true
+                                
+                                isDrawingMode = true
+                            }
+                            
+                            .font(.system(size:24))
                             .bold()
+                            .padding(.horizontal, 40)
                             .padding(.vertical, 20)
-                            .frame(width:200)
+                            .frame( height: 65)
                             .background(
                                 LinearGradient(gradient: Gradient(colors: [Color.coloBut1, Color.colorBut2]), startPoint: .leading, endPoint: .trailing))
                             .foregroundColor(.white)
-                            .cornerRadius(300)
-                        
+                            .cornerRadius(80)
+                            
+                            .sheet(isPresented: $popover) {
+                                DrawingViewModal(isPresented: $popover, image: $drawnImage)
+                            }
+                            
+                            if let drawnImage = drawnImage {
+                                Image(uiImage: drawnImage)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 350, height: 600)
+                                    .offset(x:-10, y:-90)
+                                   
+                                    .onTapGesture {
+                                        
+                                        imageModal = true
+                                            
+                                    }
+                                    .sheet(isPresented: $imageModal) {
+                                        ImageViewModal(isPresented: $imageModal, image: drawnImage)
+                                            
+                                        
+                                    }
+                                
+                            }
+                            
+                            
+                        }
+                        .offset(x:-100, y:190)
+                            
+                            
+                         
+                            
+                        }
                         
                     }
-                    
-                    .offset(x:0, y:-10)
+                }
+                .onChange(of: popover) { newValue in
+                    if !newValue {
+                        isDrawingMode = false
+                    }
                 }
                 .navigationTitle("🛖 El robo de Tenochtitlan")
+                
             }
             
             
             
+            
+            
+            
+            
         }
+        
     }
     
     
     
-    
-    
-    
-    
-}
+

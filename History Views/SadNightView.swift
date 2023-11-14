@@ -26,7 +26,7 @@ struct SadNightView: View {
                             Spacer()
                             
                                 
-                                Image("Moc")
+                                Image("tristemoc")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 400, height: 500)
@@ -41,9 +41,7 @@ struct SadNightView: View {
                         .frame(maxHeight: .infinity)
                         
                         HStack{
-                            
-                            
-                            
+                      
                             ZStack{
                                 RoundedRectangle(cornerRadius: 40)
                                     .frame(width:300, height:200)
@@ -87,7 +85,7 @@ struct SadNightView: View {
                                         Image("PedroA")
                                             .resizable()
                                             .scaledToFill()
-                                            .frame(width: 310, height: 410)
+                                            .frame(width: 410, height: 500)
                                             .clipped()
                                             .offset(x:-500, y:25)
                                         Image("Lanzas")

@@ -41,13 +41,12 @@ struct Llegada3View: View {
                                 
                                 Button(action:{poppover.toggle()}){
                                     
-                                    Image("Moc")
+                                    Image("mocserio")
                                         .resizable()
                                         .scaledToFill()
                                         .frame(width: 400, height: 500)
                                         .clipped()
-                                    Spacer()
-                                        .frame(height:10)
+                                        .offset(x:-245, y: -80)
                                     
                                 }
                             }
@@ -226,7 +225,7 @@ struct LlegadaSiView: View {
                             
                             Button(action:{poppover.toggle()}){
                                 
-                                Image("Moc")
+                                Image("mocserio")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 400, height: 500)
@@ -245,7 +244,7 @@ struct LlegadaSiView: View {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 40)
                                     .foregroundStyle(Color("List BG"))
-                                    .frame(width:360, height:250)
+                                    .frame(width:360, height:200)
                                 
                                 VStack{
                                     Text("Aunque fuimos participes de la batalla, los españoles nos ganaron ")
@@ -348,7 +347,7 @@ struct LlegadaSiView: View {
                 
                 
                 
-                .navigationTitle("⛵️ Llegó Hernán Cortés")
+                .navigationTitle("🛡️ Batalla Centla")
             }
             
             
@@ -381,7 +380,7 @@ struct LlegadaNoView: View {
                             
                             Button(action:{poppover.toggle()}){
                                 
-                                Image("Moc")
+                                Image("tristemoc")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 400, height: 500)
@@ -403,7 +402,7 @@ struct LlegadaNoView: View {
                                     .frame(width:360, height:250)
                                 
                                 VStack{
-                                    Text("Decidimos ser pacíficos pero no todos son como nosotros y tuvimos una batalla contra los españoles aunque ellos ganaron")
+                                    Text("Deciste ser pacífico pero no todos son como tú pero aún así tuvimos que pelear contra ellos y nos ganaron ya que sus armas eran más modernas.")
                                         .font(.system(size: 25))
                                         .padding()
                                         .foregroundStyle(Color.white)
@@ -418,7 +417,7 @@ struct LlegadaNoView: View {
                             .frame(width: 400, height: 250)
                             
                             .transition(.slide)
-                            .offset(x:200,y:-200)
+                            .offset(x:200,y:-140)
                             
                             
                             
@@ -502,7 +501,7 @@ struct LlegadaNoView: View {
                 
                 
                 
-                .navigationTitle("⛵️ Llegó Hernán Cortés")
+                .navigationTitle("🛡️ Batalla Centla")
             }
             
             
